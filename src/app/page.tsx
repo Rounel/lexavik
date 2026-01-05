@@ -32,8 +32,8 @@ function AboutSection() {
       <div className="mx-auto w-full max-w-480">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Image Column */}
-          <div className="relative">
-            <div className="relative h-[600px] w-full overflow-hidden">
+          <div className="relative h-[700px]">
+            <div className="relative h-full w-full overflow-hidden">
               <Image
                 src="/team (12).jpeg"
                 alt="Legal Excellence"
@@ -43,7 +43,7 @@ function AboutSection() {
               />
             </div>
             {/* Decorative overlay box */}
-            <div className="absolute -bottom-8 -right-8 bg-primary p-8 rounded-lg shadow-xl max-w-xs hidden lg:block">
+            {/* <div className="absolute -bottom-8 -right-8 bg-primary p-8 rounded-lg shadow-xl max-w-xs hidden lg:block">
               <div className="flex items-center gap-4">
                 <div className="bg-white rounded-full p-4">
                   <Scale className="h-8 w-8 text-primary" />
@@ -53,21 +53,21 @@ function AboutSection() {
                   <p className="text-white text-sm">Years Experience</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Content Column */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center py-10">
             <span className="text-primary-700 font-medium mb-2 text-sm uppercase tracking-wide">Why Choose LEXAVIK</span>
             <h2 className="mb-6 text-4xl font-light text-secondary lg:text-5xl">
               Your Trusted Legal Partner
             </h2>
 
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-gray-600 mb-6 max-w-180 text-justify leading-relaxed">
               Créé en avril 2015, le Cabinet d&apos;Avocats <span className="font-medium text-secondary">LEXAVIK</span> est une structure organisée autour d&apos;une équipe pluridisciplinaire d&apos;avocats et d&apos;experts. De vocation droit des affaires, il intervient à Paris et à Abidjan.
             </p>
 
-            <p className="text-gray-600 mb-8 leading-relaxed">
+            <p className="text-gray-600 mb-8 max-w-180 text-justify leading-relaxed">
               Riche d&apos;une expérience acquise sur le terrain, le Cabinet <span className="font-medium text-secondary">LEXAVIK</span> maîtrise le droit européen des affaires, le droit OHADA et les différentes réglementations communautaires (CEMAC, UEMOA, CIMA, OAPI). Cette synergie de compétences permet à LEXAVIK et ses partenaires internationaux d&apos;offrir à sa clientèle un service juridique complet.
             </p>
 

@@ -1,27 +1,18 @@
 "use client"
 
-import { ArrowRight, Scale, Building2, Shield, Users, Plane } from "lucide-react"
-import { PRACTICE_AREAS } from "@/constants/company"
+import { Search } from "lucide-react"
+import { EXPERTISE_POLES } from "@/constants/company"
 import { PRACTICES_DICT } from "@/hooks/dictionnary/practices"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
 import HeroBanner from "@/components/HeroBanner"
 import { useStore } from "@/hooks/use-language"
 import CTASection from "@/components/CTA"
 import PracticeSection from "@/components/PracticeSection"
-
-
-// Map icon names to actual icon components
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Users,
-  Plane,
-  Building2,
-  Scale,
-  Shield
-};
+import { useState } from "react"
 
 export default function PracticesPage() {
   const { language } = useStore();
+  const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [searchDomain, setSearchDomain] = useState<string>("");
 
   return (
     <div className="min-h-screen bg-white">
@@ -32,16 +23,70 @@ export default function PracticesPage() {
         description={language === 'fr'
           ? "Dans un contexte de mondialisation et de développement croissant des échanges commerciaux, l'optimisation et la bonne gouvernance s'imposent comme un impératif. Le cabinet LEXAVIK accompagne ses clients tant en conseil qu'en contentieux."
           : "In a context of globalization and growing commercial exchanges, optimization and good governance are imperative. LEXAVIK supports its clients in both advisory and litigation matters."}
-        overlayColor="secondary"
-        overlayOpacity={55}
         className="pt-32"
       />
 
+      {/* Search Section */}
+      <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="">
+            <h3 className="text-2xl font-medium text-secondary mb-6">
+              {language === 'fr' ? "Rechercher un domaine d'expertise" : "Search for an area of expertise"}
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Catégorie Select */}
+              <div>
+                <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-2">
+                  {language === 'fr' ? "Catégorie" : "Category"}
+                </label>
+                <select
+                  id="category"
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-700 focus:border-transparent"
+                >
+                  <option value="">
+                    {language === 'fr' ? "Toutes les catégories" : "All categories"}
+                  </option>
+                  {EXPERTISE_POLES.map((pole) => (
+                    <option key={pole.id} value={pole.id}>
+                      {pole.title[language]}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Domaine Input */}
+              <div>
+                <label htmlFor="domain" className="block text-sm font-medium text-gray-700 mb-2">
+                  {language === 'fr' ? "Domaine" : "Domain"}
+                </label>
+                <div className="relative">
+                  <input
+                    id="domain"
+                    type="text"
+                    value={searchDomain}
+                    onChange={(e) => setSearchDomain(e.target.value)}
+                    placeholder={language === 'fr' ? "Rechercher un domaine..." : "Search for a domain..."}
+                    className="w-full px-4 py-3 pl-11 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-700 focus:border-transparent"
+                  />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Practice Areas Grid */}
-      <PracticeSection />
+      <PracticeSection
+        selectedCategory={selectedCategory}
+        searchDomain={searchDomain}
+        isSearchPage={true}
+      />
 
       {/* Why Choose Us Section */}
-      <div className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+      {/* <div className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <span className="text-primary-700 font-medium mb-2 text-sm uppercase tracking-wide">
@@ -86,10 +131,10 @@ export default function PracticesPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* CTA Section */}
-      <CTASection />
+      {/* <CTASection /> */}
     </div>
   )
 }

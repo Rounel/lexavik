@@ -38,8 +38,8 @@ export const COMPANY_INFO = {
     email: "akwaba@lexavik.com",
     phone: "+33 (0) 1.53.16.05.40",
     address: {
-      en: "93, Rue de Maubeuge, 75010 Paris",
-      fr: "93, Rue de Maubeuge, 75010 Paris"
+      en: "8, Rue de Chantilly – 75009 PARIS",
+      fr: "8, Rue de Chantilly – 75009 PARIS"
     }
   },
   social: {
@@ -420,11 +420,6 @@ export const EXPERTISE_POLES = [
         fr: 'Contentieux & Arbitrage', 
         en: 'Litigation & Arbitration' 
       },
-      { 
-        id: 'pen', 
-        fr: 'Droit Pénal', 
-        en: 'Criminal Law' 
-      }
     ]
   },
   {
@@ -484,7 +479,9 @@ export const TEAM_MEMBERS = [
       fr: "Expert en droit des affaires avec une vaste expérience en droit des sociétés, contentieux fiscal, droit bancaire et financier, droit OHADA et projets internationaux."
     },
     email: "simplice.kassi@lexavik.com",
-    phone: "+33 (0) 7.52.71.42.43"
+    phone: "+33 (0) 7.52.71.42.43",
+    phone_civ: "+225 07 52 71 42 43",
+    status: "associate"
   },
   {
     id: "3",
@@ -507,7 +504,8 @@ export const TEAM_MEMBERS = [
       fr: "Universitaire et praticien distingué avec une expertise en droit des affaires et recherche juridique."
     },
     email: "nanga.silue@lexavik.com",
-    phone: "+33 (0) 6.43.36.95.88"
+    phone: "+33 (0) 6.43.36.95.88",
+    status: "associate"
   },
   {
     id: "2",
@@ -530,8 +528,84 @@ export const TEAM_MEMBERS = [
       fr: "Spécialisé en droit des affaires et financement de projets avec une expertise particulière en droit OHADA et transactions internationales."
     },
     email: "anthony.obeng@lexavik.com",
-    phone: "+33 (0) 6.24.05.03.22"
+    phone: "+33 (0) 6.24.05.03.22",
+    phone_civ: "+225 06 24 05 03 22",
+    status: "associate"
   },
+  {
+    id: "4",
+    name: "Priscillia LAGBO",
+    role: {
+      fr: "Juriste",
+      en: "Legal Counsel"
+    },
+    status: "partner",
+    image: "/team/default-avatar.png", // À remplacer par le chemin de la photo si disponible
+    bio: {
+      en: "Legal professional with expertise in corporate law and legal research.",
+      fr: "Professionnelle du droit avec une expertise en droit des sociétés et en recherche juridique."
+    },
+    education: {
+      en: "Master's Degree in Business Law",
+      fr: "Master en Droit des Affaires"
+    },
+    specialization: {
+      en: "Corporate Law, Legal Research",
+      fr: "Droit des sociétés, Recherche juridique"
+    },
+    email: "priscillia.lagbo@lexavik.com",
+    phone: "+33 (0) 1.53.16.05.40"
+  },
+  {
+  id: "5",
+  name: "TANOH BEHEGBIN MARIUS",
+  role: {
+    en: "Tax and Social Security Law Specialist",
+    fr: "Spécialiste en Fiscalité et Droits des Prélèvements Sociaux"
+  },
+  status: "partner",
+  image: "/team/default-avatar.png", // À remplacer par la photo si disponible
+  bio: {
+    en: "Tax and Social Security Law Specialist with experience in legal consulting firms and law firms, including GOGOUA TAX and LEGAL. Currently collaborating with LEXAVIK [FR] and OBENG-KOFI Fian [CI].",
+    fr: "Spécialiste en Fiscalité et Droits des Prélèvements Sociaux avec une expérience en cabinets de conseil et d'avocats, dont le Cabinet GOGOUA TAX and LEGAL. Actuellement collaborateur d'avocats près le cabinet LEXAVIK [FR] et le Cabinet OBENG-KOFI Fian [CI]."
+  },
+  education: {
+    en: "Master's Degree in Tax and Social Security Law (2020-2021)\nLicense in Private Law (2015-2016)\nBaccalaureate A2 (2013)",
+    fr: "Master en Fiscalité et Droits des Prélèvements Sociaux (2020-2021)\nLicence en Droit Privé (2015-2016)\nBaccalauréat série A2 (2013)"
+  },
+  specialization: {
+    en: "Tax Law, Social Security Law, Judicial Career, Private Law",
+    fr: "Droit fiscal, Droits des prélèvements sociaux, Carrière judiciaire, Droit privé"
+  },
+  email: "marius.tanoh@lexavik.com", // À confirmer
+  phone: "+33 (0) 1.53.16.05.40", // À confirmer
+  phone_civ: "+225 00 00 00 00" // À compléter
+},
+{
+  id: "6",
+  name: "KOUAMÉ Konan Saint Serge",
+  role: {
+    en: "Legal Counsel - Doctor of Law",
+    fr: "Juriste collaborateur - Docteur en droit privé"
+  },
+  status: "partner",
+  image: "/team/default-avatar.png", // À remplacer par la photo si disponible
+  bio: {
+    en: "Legal Counsel at LEXAVIK Law Firm. Doctor of Private Law, author of a Thesis on the liability of parent companies for their subsidiaries under OHADA law. Member of the Laboratory of Studies on Law and Development in Côte d'Ivoire (LEDD-CI). Specializes in business law and is a Lecturer-Researcher at Félix Houphouët-Boigny University (Abidjan).",
+    fr: "Juriste collaborateur au sein de LEXAVIK Cabinet d'Avocats. Docteur en droit privé, auteur d'une Thèse sur la responsabilité des sociétés mères du fait de leurs filiales en droit OHADA. Membre du Laboratoire d'Études sur le Droit et le Développement en Côte d'Ivoire (LEDD-CI). Spécialisé en droit des affaires, il est Enseignant-chercheur à l'Université Felix Houphouët-Boigny (Abidjan)."
+  },
+  education: {
+    en: "Doctorate in Private Law",
+    fr: "Doctorat en Droit privé"
+  },
+  specialization: {
+    en: "Business Law, Tax Law, Corporate Law, Labor Law, Personal Status Law, OHADA Law",
+    fr: "Droit des affaires, Droit fiscal, Droit des sociétés, Droit du travail, Droit des personnes, Droit OHADA"
+  },
+  email: "saintserge.kouame@lexavik.com", // À confirmer
+  phone: "+33 (0) 1.53.16.05.40", // À confirmer
+  phone_civ: "+225 00 00 00 00" // À compléter
+}
 ] as const;
 
 export const NEWS_ARTICLES = [

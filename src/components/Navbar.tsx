@@ -49,23 +49,37 @@ export const Navbar = () => {
     }, []);
     return (
         !pathname.includes('admin') && (
-            <div className={`fixed top-0 w-full z-20 md:pl-20 px-6 p-2 flex flex-row justify-between items-center font-[family-name:var(--font-dm-sans) transition-all duration-300 ${
+            <div className={`fixed top-0 w-full z-20 px-6 p-2 flex flex-row justify-between items-center font-[family-name:var(--font-dm-sans) transition-all duration-300 ${
                 isScrolled 
-                    ? 'bg-white shadow-md py-2'
-                    : 'bg-transparent py-4'
+                    ? 'bg-white shadow-md h-20'
+                    : 'bg-transparent'
                 }
             `}>
                 <div className="max-w-360 w-full mx-auto flex flex-row justify-between items-center">
-                    <Link href="/">
-                        <Image src={"/logo.png"} alt="Logo LEXAVIK" width={100} height={60} />
-                    </Link>
+                    {
+                        !isScrolled 
+                        ? (
+                            <Link href="/">
+                                <Image src={"/logotextblanc.png"} alt="Logo LEXAVIK" width={500} height={500} className="w-36 h-auto" />
+                            </Link>
+                        )
+                        : (
+                            <Link href="/">
+                                <Image src={"/logonotext.png"} alt="Logo LEXAVIK" width={500} height={500} className="w-26 h-auto" />
+                            </Link>
+                        )
+                    }
 
                     <NavigationMenu className="hidden xl:block">
-                        <NavigationMenuList className={`flex flex-row gap-8 text-secondary-900`}>
+                        <NavigationMenuList className={`flex flex-row gap-8 font-[family-name:var(--font-dm-sans)] ${
+                            isScrolled 
+                                ? ''
+                                : 'text-white'
+                            }`}>
                             {
                                 navbar_links.map(link => link.sub.length == 0 ? (
                                     <NavigationMenuItem key={link.label[language]} className="">
-                                        <NavigationMenuLink href={link.link} className=" hover:text-primary py-2 text-md">
+                                        <NavigationMenuLink href={link.link} className=" hover:text-primary-600 py-2 text-md">
                                             {link.label[language]}
                                         </NavigationMenuLink>
                                     </NavigationMenuItem>
@@ -76,7 +90,7 @@ export const Navbar = () => {
                                             <ul className="grid gap-3 p-4 md:w-[300px] md:grid-cols-1 lg:w-[300px]">
                                                 {
                                                     link.sub.map(sub => (
-                                                        <NavigationMenuLink key={sub.label[language]} className="text-white hover:text-primary py-2 text-md border-b-[1px] border-neutral-500 last:border-b-0 pl-4" href={sub.link}>
+                                                        <NavigationMenuLink key={sub.label[language]} className="text-white hover:text-primary-600 py-2 text-md border-b-[1px] border-neutral-500 last:border-b-0 pl-4" href={sub.link}>
                                                             {sub.label[language]}
                                                         </NavigationMenuLink>
                                                     ))
@@ -89,11 +103,14 @@ export const Navbar = () => {
                         </NavigationMenuList>
                     </NavigationMenu>
 
-                    <Button>
+                    <Button className="hidden xl:block">
                         <Link href="/contact">Prendre rendez-vous</Link>
                     </Button>
-        
+
                     <div className="flex flex-row gap-4 sm:gap-10 relative xl:hidden">
+                        <Button className="hidden lg:block">
+                            <Link href="/contact">Prendre rendez-vous</Link>
+                        </Button>
         
                         <Sheet>
                             <SheetTrigger className="p-1 border-[1px] rounded-full text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all transition-300"><Menu width={35} height={35} className="" /></SheetTrigger>

@@ -2,20 +2,19 @@
 
 import Link from "next/link"
 import { Mail, Phone, MapPin } from "lucide-react"
+import Image from "next/image"
+import { COMPANY_INFO } from "@/constants/company"
 
 export function Footer() {
   return (
-    <footer className="bg-secondary-950 text-white">
+    <footer className="bg-secondary-950 text-white pt-10">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About Section */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <span className="text-[var(--primary-600)] font-bold text-lg">L</span>
-              </div>
-              <span className="text-2xl font-serif font-bold">LEXAVIK</span>
+            <div className="flex items-center justify-center -mt-9">
+              <Image src="/logoblanc.png" alt="Lexavik Logo" width={500} height={500} className="w-52 h-auto" />
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Cabinet d&apos;avocats créé en avril 2015, spécialisé en droit des affaires. Nous intervenons à Paris et à Abidjan pour sécuriser vos projets et vous défendre devant les juridictions nationales et internationales.
@@ -62,32 +61,32 @@ export function Footer() {
             <h3 className="text-xl font-semibold mb-6">Liens Rapides</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/practices" className="text-gray-300 hover:text-[var(--primary-400)] transition-colors">
+                <Link href="/practices" className="text-gray-300 hover:text-primary-600 transition-colors">
                   Domaines d&apos;Intervention
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-[var(--primary-400)] transition-colors">
+                <Link href="/about" className="text-gray-300 hover:text-primary-600 transition-colors">
                   À Propos
                 </Link>
               </li>
               <li>
-                <Link href="/team" className="text-gray-300 hover:text-[var(--primary-400)] transition-colors">
+                <Link href="/team" className="text-gray-300 hover:text-primary-600 transition-colors">
                   Notre Équipe
                 </Link>
               </li>
               <li>
-                <Link href="/news" className="text-gray-300 hover:text-[var(--primary-400)] transition-colors">
+                <Link href="/news" className="text-gray-300 hover:text-primary-600 transition-colors">
                   Actualités & Insights
                 </Link>
               </li>
               <li>
-                <Link href="/locations" className="text-gray-300 hover:text-[var(--primary-400)] transition-colors">
+                <Link href="/locations" className="text-gray-300 hover:text-primary-600 transition-colors">
                   Nos Bureaux
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-[var(--primary-400)] transition-colors">
+                <Link href="/contact" className="text-gray-300 hover:text-primary-600 transition-colors">
                   Contact
                 </Link>
               </li>
@@ -99,27 +98,27 @@ export function Footer() {
             <h3 className="text-xl font-semibold mb-6">Expertises</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/practices#ohada-law" className="text-gray-300 hover:text-[var(--primary-400)] transition-colors">
+                <Link href="/practices#ohada-law" className="text-gray-300 hover:text-primary-600 transition-colors">
                   Droit OHADA
                 </Link>
               </li>
               <li>
-                <Link href="/practices#corporate-law" className="text-gray-300 hover:text-[var(--primary-400)] transition-colors">
+                <Link href="/practices#corporate-law" className="text-gray-300 hover:text-primary-600 transition-colors">
                   Droit des Sociétés
                 </Link>
               </li>
               <li>
-                <Link href="/practices#banking-finance" className="text-gray-300 hover:text-[var(--primary-400)] transition-colors">
+                <Link href="/practices#banking-finance" className="text-gray-300 hover:text-primary-600 transition-colors">
                   Droit Bancaire & Financier
                 </Link>
               </li>
               <li>
-                <Link href="/practices#major-projects" className="text-gray-300 hover:text-[var(--primary-400)] transition-colors">
+                <Link href="/practices#major-projects" className="text-gray-300 hover:text-primary-600 transition-colors">
                   Grands Projets
                 </Link>
               </li>
               <li>
-                <Link href="/practices#litigation-arbitration" className="text-gray-300 hover:text-[var(--primary-400)] transition-colors">
+                <Link href="/practices#litigation-arbitration" className="text-gray-300 hover:text-primary-600 transition-colors">
                   Contentieux & Arbitrage
                 </Link>
               </li>
@@ -128,37 +127,27 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Contact</h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[var(--primary-400)] mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold mb-1">Paris</p>
-                  <p className="text-gray-300 text-sm">93, Rue de Maubeuge, 75010 Paris</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-[var(--primary-400)] mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold mb-1">Téléphone</p>
-                  <a href="tel:+33153160540" className="text-gray-300 text-sm hover:text-[var(--primary-400)]">
-                    +33 (0) 1.53.16.05.40
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-[var(--primary-400)] mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-semibold mb-1">Email</p>
-                  <a
-                    href="mailto:akwaba@lexavik.com"
-                    className="text-gray-300 text-sm hover:text-[var(--primary-400)] transition-colors"
-                  >
-                    akwaba@lexavik.com
-                  </a>
-                </div>
-              </div>
-            </div>
+            <h3 className="text-lg font-semibold text-white mb-6">Contactez-nous</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <MapPin className="h-5 w-5 text-primary-600 mt-1 mr-3 shrink-0" />
+                <p className="text-gray-300">
+                  {COMPANY_INFO.contact.address.fr}
+                </p>
+              </li>
+              <li className="flex items-center">
+                <Phone className="h-5 w-5 text-primary-600 mr-3" />
+                <a href={`tel:${COMPANY_INFO.contact.phone}`} className="text-gray-300 hover:text-white">
+                  {COMPANY_INFO.contact.phone}
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Mail className="h-5 w-5 text-primary-600 mr-3" />
+                <a href={`mailto:${COMPANY_INFO.contact.email}`} className="text-gray-300 hover:text-white">
+                  {COMPANY_INFO.contact.email}
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -169,13 +158,13 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">Copyright © 2025 LEXAVIK - Tous droits réservés</p>
             <div className="flex gap-6 text-sm">
-              <Link href="/legal/privacy" className="text-gray-400 hover:text-[var(--primary-400)] transition-colors">
+              <Link href="/legal/privacy" className="text-gray-400 hover:text-primary-600 transition-colors">
                 Politique de Confidentialité
               </Link>
-              <Link href="/legal/terms" className="text-gray-400 hover:text-[var(--primary-400)] transition-colors">
+              <Link href="/legal/terms" className="text-gray-400 hover:text-primary-600 transition-colors">
                 Mentions Légales
               </Link>
-              <Link href="/legal/cookies" className="text-gray-400 hover:text-[var(--primary-400)] transition-colors">
+              <Link href="/legal/cookies" className="text-gray-400 hover:text-primary-600 transition-colors">
                 Cookies
               </Link>
             </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, DM_Serif_Text } from "next/font/google";
+import { DM_Sans, DM_Serif_Text, Bitter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -15,6 +15,11 @@ const dmSerifText = DM_Serif_Text({
   weight: "400"
 });
 
+const bitter = Bitter({
+  variable: "--font-bitter",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Lexavik",
   description: "Ton cabinet préféré",
@@ -28,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.variable} ${dmSerifText.variable} antialiased bg-secondary-950 relative`}
+        className={`${dmSans.variable} ${dmSerifText.variable} ${bitter.variable} antialiased bg-secondary-950 relative`}
       >
         <Navbar />
         {children}

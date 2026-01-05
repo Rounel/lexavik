@@ -80,7 +80,7 @@ export default function ContactPage() {
           {/* Left Column - Contact Info Cards */}
           <div className="space-y-6">
             {contactInfo.map((item) => (
-              <div key={item.id} className="bg-white rounded-lg shadow-md p-6 border border-gray-100">
+              <div key={item.id} className="bg-white border-b p-6 border-gray-300">
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary-600 p-3 rounded-full">
                     {item.icon}
@@ -96,7 +96,7 @@ export default function ContactPage() {
           </div>
           
           {/* Right Column - Contact Form */}
-          <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-8 border border-gray-100">
+          <div className="lg:col-span-2 bg-white p-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Get in Touch with Us</h2>
             <p className="text-gray-600 mb-8">Fill out the form and our team will get back to you as soon as possible.</p>
             
@@ -190,9 +190,9 @@ export default function ContactPage() {
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 h-screen">
+      <div className="grid grid-cols-1 h-[50dvh]">
         {/* Abidjan Section */}
-        <Link href="/cities/abidjan" className="group relative h-[50vh] md:h-screen overflow-hidden bg-black">
+        {/* <Link href="/cities/abidjan" className="group relative h-[50vh] md:h-screen overflow-hidden bg-black">
           <Image
             src="/babi.jpg"
             alt="Abidjan cityscape"
@@ -226,10 +226,10 @@ export default function ContactPage() {
           <div className="absolute bottom-0 right-0 w-32 h-24 md:w-48 md:h-32">
             <div className="absolute bottom-0 right-0 w-full h-full bg-amber-400/80 -skew-x-12 transform origin-bottom-right" />
           </div>
-        </Link>
+        </Link> */}
 
         {/* Casablanca Section */}
-        <Link href="/cities/casablanca" className="group relative h-[50vh] md:h-screen overflow-hidden bg-black">
+        <div className="group relative h-[55dvh] overflow-hidden bg-black">
           <Image
             src="/paris.jpg"
             alt="Casablanca cityscape"
@@ -262,7 +262,11 @@ export default function ContactPage() {
           <div className="absolute bottom-0 right-0 w-32 h-24 md:w-48 md:h-32">
             <div className="absolute bottom-0 right-0 w-full h-full bg-amber-400/80 -skew-x-12 transform origin-bottom-right" />
           </div>
-        </Link>
+        </div>
+      </div>
+
+      <div className="bg-secondary-950">
+
       </div>
     </div>
   )

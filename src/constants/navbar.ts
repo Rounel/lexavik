@@ -18,42 +18,25 @@ export const navbar_links: NavProps = [
         sub: []
     },
     {
-        label: NAV_DICT.Practices,
-        link: "/practices",
+        label: NAV_DICT.About,
+        link: "/about",
         sub: []
     },
     {
-        label: NAV_DICT.About,
-        link: "/about",
-        sub: [
-            {
-                label: NAV_DICT.WhoWeAre,
-                link: "/about"
-            },
-            {
-                label: NAV_DICT.OurHistory,
-                link: "/about#history"
-            },
-            {
-                label: NAV_DICT.OurValues,
-                link: "/about#values"
-            },
-            {
-                label: NAV_DICT.ProBono,
-                link: "/about#probono"
-            }
-        ]
+        label: NAV_DICT.Practices,
+        link: "/practices",
+        sub: []
     },
     {
         label: NAV_DICT.Team,
         link: "/team",
         sub: []
     },
-    {
-        label: NAV_DICT.Insights,
-        link: "/news",
-        sub: []
-    },
+    // {
+    //     label: NAV_DICT.Insights,
+    //     link: "/news",
+    //     sub: []
+    // },
     {
         label: NAV_DICT.Offices,
         link: "/locations",

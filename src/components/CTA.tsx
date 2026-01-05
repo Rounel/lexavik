@@ -10,7 +10,7 @@ export default function CTASection() {
   const { language } = useStore();
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white">
       {/* CTA Section */}
       <div className="bg-secondary py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">

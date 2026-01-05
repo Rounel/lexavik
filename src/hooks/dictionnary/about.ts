@@ -101,12 +101,12 @@ export const ABOUT_DICT: AboutDictProps = {
   },
 
   GlobalPresence: {
-    en: "Global Presence",
-    fr: "Présence Mondiale"
+    en: "A Global Presence with Diverse Clientele",
+    fr: "Une Présence Mondiale avec une Diversité de Clientèle"
   },
   GlobalPresenceText: {
-    en: "In advisory and litigation matters, our lawyers and experts receive you in Paris and accompany you throughout Africa for your international projects.",
-    fr: "Enfin, en conseil comme en contentieux, nos Avocats et experts vous reçoivent à Paris et vous accompagnent partout en Afrique pour vos projets internationaux."
+    en: "With a presence spanning Paris and Africa, our lawyers and experts provide comprehensive legal support for your international projects.",
+    fr: "Avec une présence qui s'étend de Paris à l'Afrique, nos avocats et experts vous apportent un accompagnement juridique complet pour vos projets internationaux."
   },
 
   // Values

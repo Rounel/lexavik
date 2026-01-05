@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '@/lib/utils';
 
 interface HeroBannerProps {
   title: string;
@@ -13,16 +14,16 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   title,
   subtitle,
   description,
-  overlayColor = 'secondary',
+  overlayColor = 'secondary-900-light',
   overlayOpacity = 55,
   className = '',
 }) => {
   return (
     <div 
-      className={`relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-cover bg-[url('../../public//1.jpg')] bg-cover ${className}`}
+      className={`relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-[url('../../public//1.jpg')] bg-cover ${className}`}
     >
       <div 
-        className={`absolute inset-0 bg-${overlayColor}/90 opacity-${overlayOpacity} size-full`}
+        className={cn(`absolute inset-0 bg-secondary-950/90 size-full`)}
         aria-hidden="true"
       ></div>
       <div className="mx-auto max-w-7xl text-center relative z-10">
