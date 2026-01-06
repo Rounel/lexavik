@@ -1,3 +1,4 @@
+import HeroBanner from "@/components/HeroBanner"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -6,11 +7,13 @@ import Link from "next/link"
 export default function LocationsPage() {
 
   return (
-    <div className="min-h-screen bg-secondary-950 px-4 pt-44 py-16 sm:px-6 lg:px-8">
-        <div className="mb-16 flex flex-col gap-4 mx-auto max-w-7xl">
-        <h1 className="mb-6 text-center text-4xl font-light leading-tight lg:text-5xl text-primary-700">Locations</h1>
-        <p className="text-lg text-center leading-relaxed text-white">Strategically spread across the Continent</p>
-        </div>
+    <div className="min-h-screen bg-white">
+      <HeroBanner
+        subtitle="Locations"
+        title="Strategically spread across the Continent"
+        description=""
+        className="pt-32"
+      />
 
         <div className="grid grid-cols-1 md:grid-cols-2 h-screen">
             {/* Abidjan Section */}

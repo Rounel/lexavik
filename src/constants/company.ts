@@ -540,7 +540,7 @@ export const TEAM_MEMBERS = [
       en: "Legal Counsel"
     },
     status: "partner",
-    image: "/team/default-avatar.png", // À remplacer par le chemin de la photo si disponible
+    image: "/Photo - Priscillia.jpeg", // À remplacer par le chemin de la photo si disponible
     bio: {
       en: "Legal professional with expertise in corporate law and legal research.",
       fr: "Professionnelle du droit avec une expertise en droit des sociétés et en recherche juridique."
@@ -564,7 +564,7 @@ export const TEAM_MEMBERS = [
     fr: "Spécialiste en Fiscalité et Droits des Prélèvements Sociaux"
   },
   status: "partner",
-  image: "/team/default-avatar.png", // À remplacer par la photo si disponible
+  image: "/Photo de TBM.png", // À remplacer par la photo si disponible
   bio: {
     en: "Tax and Social Security Law Specialist with experience in legal consulting firms and law firms, including GOGOUA TAX and LEGAL. Currently collaborating with LEXAVIK [FR] and OBENG-KOFI Fian [CI].",
     fr: "Spécialiste en Fiscalité et Droits des Prélèvements Sociaux avec une expérience en cabinets de conseil et d'avocats, dont le Cabinet GOGOUA TAX and LEGAL. Actuellement collaborateur d'avocats près le cabinet LEXAVIK [FR] et le Cabinet OBENG-KOFI Fian [CI]."
@@ -589,7 +589,7 @@ export const TEAM_MEMBERS = [
     fr: "Juriste collaborateur - Docteur en droit privé"
   },
   status: "partner",
-  image: "/team/default-avatar.png", // À remplacer par la photo si disponible
+  image: "/Photo - Saint Serge.png", // À remplacer par la photo si disponible
   bio: {
     en: "Legal Counsel at LEXAVIK Law Firm. Doctor of Private Law, author of a Thesis on the liability of parent companies for their subsidiaries under OHADA law. Member of the Laboratory of Studies on Law and Development in Côte d'Ivoire (LEDD-CI). Specializes in business law and is a Lecturer-Researcher at Félix Houphouët-Boigny University (Abidjan).",
     fr: "Juriste collaborateur au sein de LEXAVIK Cabinet d'Avocats. Docteur en droit privé, auteur d'une Thèse sur la responsabilité des sociétés mères du fait de leurs filiales en droit OHADA. Membre du Laboratoire d'Études sur le Droit et le Développement en Côte d'Ivoire (LEDD-CI). Spécialisé en droit des affaires, il est Enseignant-chercheur à l'Université Felix Houphouët-Boigny (Abidjan)."
