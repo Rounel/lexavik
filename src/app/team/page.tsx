@@ -5,19 +5,26 @@ import { Mail, Phone, Linkedin, Search } from "lucide-react"
 import { TEAM_MEMBERS } from "@/constants/company"
 import HeroBanner from "@/components/HeroBanner"
 import { useState, useMemo } from "react"
+import { useStore } from "@/hooks/use-language"
+import { TEAM_DICT } from "@/hooks/dictionnary"
 
 export default function TeamPage() {
+  const { language } = useStore()
   const [searchName, setSearchName] = useState<string>("");
   const [searchSpecialization, setSearchSpecialization] = useState<string>("");
 
   // Filtrer les membres de l'équipe
   const filteredMembers = useMemo(() => {
-    let filtered = TEAM_MEMBERS;
+    let filtered_associate = TEAM_MEMBERS.filter(member => member.status === "associate");
+    let filtered_partner = TEAM_MEMBERS.filter(member => member.status === "partner");
 
     // Filtrer par nom
     if (searchName) {
       const nameLower = searchName.toLowerCase();
-      filtered = filtered.filter(member =>
+      filtered_associate = filtered_associate.filter(member =>
+        member.name.toLowerCase().includes(nameLower)
+      );
+      filtered_partner = filtered_partner.filter(member =>
         member.name.toLowerCase().includes(nameLower)
       );
     }
@@ -25,22 +32,26 @@ export default function TeamPage() {
     // Filtrer par spécialisation (type de droit)
     if (searchSpecialization) {
       const specLower = searchSpecialization.toLowerCase();
-      filtered = filtered.filter(member =>
+      filtered_associate = filtered_associate.filter(member =>
+        member.specialization.fr.toLowerCase().includes(specLower) ||
+        member.specialization.en.toLowerCase().includes(specLower)
+      );
+      filtered_partner = filtered_partner.filter(member =>
         member.specialization.fr.toLowerCase().includes(specLower) ||
         member.specialization.en.toLowerCase().includes(specLower)
       );
     }
 
-    return filtered;
+    return [[...filtered_associate], [...filtered_partner]];
   }, [searchName, searchSpecialization]);
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <HeroBanner
-        subtitle="Our Team"
-        title="Exceptional Legal Professionals"
-        description="Découvrez le talent et le dévouement de notre équipe juridique exceptionnelle. Rencontrez les experts engagés à protéger vos droits et à obtenir des succès juridiques."
+        subtitle={TEAM_DICT.OurTeam[language]}
+        title={TEAM_DICT.ExceptionalProfessionals[language]}
+        description={`${TEAM_DICT.TeamDescription1[language]} ${TEAM_DICT.TeamDescription2[language]}`}
         overlayColor="secondary"
         overlayOpacity={55}
         className="pt-40"
@@ -51,13 +62,13 @@ export default function TeamPage() {
         <div className="mx-auto max-w-7xl">
           <div className="">
             <h3 className="text-2xl font-medium text-secondary mb-6">
-              Rechercher un avocat
+              {TEAM_DICT.SearchLawyer[language]}
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               {/* Nom Input */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Nom de l'avocat
+                  {TEAM_DICT.LawyerName[language]}
                 </label>
                 <div className="relative">
                   <input
@@ -65,7 +76,7 @@ export default function TeamPage() {
                     type="text"
                     value={searchName}
                     onChange={(e) => setSearchName(e.target.value)}
-                    placeholder="Rechercher par nom..."
+                    placeholder={TEAM_DICT.SearchByName[language]}
                     className="w-full px-4 py-3 pl-11 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-700 focus:border-transparent"
                   />
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -75,7 +86,7 @@ export default function TeamPage() {
               {/* Type de droit Input */}
               <div>
                 <label htmlFor="specialization" className="block text-sm font-medium text-gray-700 mb-2">
-                  Type de droit
+                  {TEAM_DICT.TypeOfLaw[language]}
                 </label>
                 <div className="relative">
                   <input
@@ -83,7 +94,7 @@ export default function TeamPage() {
                     type="text"
                     value={searchSpecialization}
                     onChange={(e) => setSearchSpecialization(e.target.value)}
-                    placeholder="Ex: Droit fiscal, Droit bancaire..."
+                    placeholder={TEAM_DICT.TypeOfLawPlaceholder[language]}
                     className="w-full px-4 py-3 pl-11 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-700 focus:border-transparent"
                   />
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -95,28 +106,49 @@ export default function TeamPage() {
       </div>
 
       {/* Team Grid */}
-      <div className="px-4 py-20 sm:px-6 lg:px-8 font-[family-name:var(--font-dm-sans)]">
+      <div className="px-4 py-10 sm:px-6 lg:px-8 font-[family-name:var(--font-dm-sans)]">
         <div className="mx-auto max-w-7xl">
           {/* Results count */}
           {(searchName || searchSpecialization) && (
             <div className="mb-8">
               <h3 className="text-2xl font-medium text-secondary">
-                {filteredMembers.length} résultat{filteredMembers.length > 1 ? 's' : ''} trouvé{filteredMembers.length > 1 ? 's' : ''}
+                {filteredMembers[0].length + filteredMembers[1].length} {TEAM_DICT.ResultsFound[language]}
               </h3>
             </div>
           )}
 
-          {/* Members grid */}
-          {filteredMembers.length > 0 ? (
+          {/* Associate grid */}
+          <div className={`${filteredMembers[0].length > 0 ? '' : 'hidden'} w-full py-3 border-b border-gray-500 mb-3 text-lg font-bold text-secondary-950`}>
+            {TEAM_DICT.Partners[language]}
+          </div>
+          {filteredMembers[0].length > 0 ? (
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {filteredMembers.map((member) => (
-                <TeamMemberCard key={member.id} member={member} />
+              {filteredMembers[0].map((member) => (
+                <TeamMemberCard key={member.id} member={member} language={language} />
               ))}
             </div>
           ) : (
-            <div className="text-center py-12">
+            <div className={`${filteredMembers[0].length > 0 ? '' : 'hidden'} text-center py-12`}>
               <p className="text-gray-600 text-lg">
-                Aucun avocat trouvé avec ces critères de recherche.
+                {TEAM_DICT.NoLawyerFound[language]}
+              </p>
+            </div>
+          )}
+
+          {/* Partners grid */}
+          <div className={`${filteredMembers[1].length > 0 ? '' : 'hidden'} w-full py-3 border-b border-gray-500 mt-10 mb-3 text-lg font-bold text-secondary-950`}>
+            {TEAM_DICT.Associates[language]}
+          </div>
+          {filteredMembers[1].length > 0 ? (
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {filteredMembers[1].map((member) => (
+                <TeamMemberCard key={member.id} member={member} language={language} />
+              ))}
+            </div>
+          ) : (
+            <div className={`${filteredMembers[1].length > 0 ? '' : 'hidden'} text-center py-12`}>
+              <p className="text-gray-600 text-lg">
+                {TEAM_DICT.NoLawyerFound[language]}
               </p>
             </div>
           )}
@@ -152,13 +184,14 @@ export default function TeamPage() {
 
 interface TeamMemberCardProps {
   member: typeof TEAM_MEMBERS[number]
+  language: 'en' | 'fr'
 }
 
-function TeamMemberCard({ member }: TeamMemberCardProps) {
+function TeamMemberCard({ member, language }: TeamMemberCardProps) {
   return (
     <div className="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
       {/* Image */}
-      <div className="relative aspect-[3/4] overflow-hidden bg-gray-200">
+      <div className="relative aspect-3/4 overflow-hidden bg-gray-200">
         <Image
           src={member.image}
           alt={member.name}
@@ -189,8 +222,8 @@ function TeamMemberCard({ member }: TeamMemberCardProps) {
             </a>
           </div>
           <div className="px-4 text-justify">
-            <p className="text-gray-300 text-sm mb-3">{member.education.fr}</p>
-            <p className="text-gray-100 text-xs">{member.specialization.fr}</p>
+            <p className="text-gray-300 text-sm mb-3">{member.education[language]}</p>
+            <p className="text-gray-100 text-xs">{member.specialization[language]}</p>
           </div>
         </div>
       </div>
@@ -200,7 +233,7 @@ function TeamMemberCard({ member }: TeamMemberCardProps) {
         <h3 className="text-xl font-medium text-secondary mb-1 group-hover:text-primary-700 transition-colors">
           {member.name}
         </h3>
-        <p className="text-primary-700 font-medium text-sm mb-2">{member.role.fr}</p>
+        <p className="text-primary-700 font-medium text-sm mb-2">{member.role[language]}</p>
       </div>
     </div>
   )

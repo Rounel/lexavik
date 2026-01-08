@@ -15,6 +15,32 @@ export const PRACTICES_DICT: PracticesDictProps = {
     en: "Practice Areas",
     fr: "Domaines de Pratique"
   },
+  HeroDescription: {
+    en: "In a context of globalization and growing commercial exchanges, optimization and good governance are imperative. LEXAVIK supports its clients in both advisory and litigation matters.",
+    fr: "Dans un contexte de mondialisation et de développement croissant des échanges commerciaux, l'optimisation et la bonne gouvernance s'imposent comme un impératif. Le cabinet LEXAVIK accompagne ses clients tant en conseil qu'en contentieux."
+  },
+
+  // Search Section
+  SearchForExpertise: {
+    en: "Search for an area of expertise",
+    fr: "Rechercher un domaine d'expertise"
+  },
+  Category: {
+    en: "Category",
+    fr: "Catégorie"
+  },
+  AllCategories: {
+    en: "All categories",
+    fr: "Toutes les catégories"
+  },
+  Domain: {
+    en: "Domain",
+    fr: "Domaine"
+  },
+  SearchDomain: {
+    en: "Search for a domain...",
+    fr: "Rechercher un domaine..."
+  },
 
   // Practice Names
   OHADA: {

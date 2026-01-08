@@ -82,7 +82,7 @@ export const COMPANY_INFO = {
 
 export const PRACTICE_AREAS = [
   {
-    id: "ohada-law",
+    id: "ohada",
     title: {
       en: "OHADA & Community Law",
       fr: "Droit OHADA et Communautaire"
@@ -96,7 +96,7 @@ export const PRACTICE_AREAS = [
     image: "/dc.jpg"
   },
   {
-    id: "litigation-arbitration",
+    id: "cont",
     title: {
       en: "Litigation & Arbitration",
       fr: "Contentieux & Arbitrage"
@@ -110,7 +110,7 @@ export const PRACTICE_AREAS = [
     image: "/ddf.jpg"
   },
   {
-    id: "banking-finance",
+    id: "bank",
     title: {
       en: "Banking & Finance Law",
       fr: "Droit Bancaire et Financier"
@@ -124,7 +124,7 @@ export const PRACTICE_AREAS = [
     image: "/bf.jpg"
   },
   {
-    id: "corporate-law",
+    id: "soc",
     title: {
       en: "Corporate & Company Law",
       fr: "Corporate & Droit des Sociétés"
@@ -138,7 +138,7 @@ export const PRACTICE_AREAS = [
     image: "/dds.jpg"
   },
   {
-    id: "tax-law",
+    id: "fisc",
     title: {
       en: "Tax Law & Tax Litigation",
       fr: "Droit Fiscal et Contentieux Fiscal"
@@ -152,7 +152,7 @@ export const PRACTICE_AREAS = [
     image: "/dda.jpg"
   },
   {
-    id: "competition-law",
+    id: "conc",
     title: {
       en: "Competition Law",
       fr: "Droit de la Concurrence"
@@ -166,7 +166,7 @@ export const PRACTICE_AREAS = [
     image: "/ddc.jpg"
   },
   {
-    id: "public-law",
+    id: "pi",
     title: {
       en: "Public Business Law",
       fr: "Droit Public des Affaires"
@@ -180,7 +180,7 @@ export const PRACTICE_AREAS = [
     image: "/smart-law-legal-advice-icons-lawyer-working-tools (1).jpg"
   },
   {
-    id: "major-projects",
+    id: "infra",
     title: {
       en: "Major Projects & Infrastructure",
       fr: "Grands Projets & Infrastructures"
@@ -194,7 +194,7 @@ export const PRACTICE_AREAS = [
     image: "/bf.jpg"
   },
   {
-    id: "environment-energy",
+    id: "env",
     title: {
       en: "Environment & Renewable Energy",
       fr: "Environnement & Énergies Renouvelables"
@@ -208,7 +208,7 @@ export const PRACTICE_AREAS = [
     image: "/dc.jpg"
   },
   {
-    id: "real-estate",
+    id: "immo",
     title: {
       en: "Real Estate Law",
       fr: "Droit Immobilier"
@@ -236,7 +236,7 @@ export const PRACTICE_AREAS = [
     image: "/ddf.jpg"
   },
   {
-    id: "intellectual-property",
+    id: "int-pro",
     title: {
       en: "Intellectual Property",
       fr: "Propriété Intellectuelle"
@@ -250,7 +250,7 @@ export const PRACTICE_AREAS = [
     image: "/dda.jpg"
   },
   {
-    id: "immigration",
+    id: "ext",
     title: {
       en: "Immigration & Nationality Law",
       fr: "Droit des Étrangers et de la Nationalité"
@@ -278,7 +278,7 @@ export const PRACTICE_AREAS = [
     image: "/dc.jpg"
   },
   {
-    id: "civil-law",
+    id: "civ",
     title: {
       en: "Civil Law",
       fr: "Droit Civil"

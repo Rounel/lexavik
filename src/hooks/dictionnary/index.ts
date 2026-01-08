@@ -1,0 +1,11 @@
+// Centralized export of all dictionaries
+export { COMMON_DICT } from './common';
+export { NAV_DICT } from './nav';
+export { HOME_DICT } from './home';
+export { CONTACT_DICT } from './contact';
+export { TEAM_DICT } from './team';
+export { EXPERTISE_DICT } from './expertise';
+export { LOCATIONS_DICT } from './locations';
+export { NEWS_DICT } from './news';
+export { ABOUT_DICT } from './about';
+export { PRACTICES_DICT } from './practices';

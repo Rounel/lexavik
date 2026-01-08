@@ -7,6 +7,7 @@ import { useStore } from "@/hooks/use-language"
 import Image from "next/image"
 import { EXPERTISE_POLES } from "@/constants/company"
 import { useMemo } from "react"
+import { HOME_DICT, COMMON_DICT } from "@/hooks/dictionnary"
 
 interface PracticeSectionProps {
   selectedCategory?: string;
@@ -106,7 +107,7 @@ export default function PracticeSection({
                     className={`group relative hover:shadow-2xl hover:border-primary-700 transition-all duration-300 h-70 ${index === 0 || index === 3 ? 'bg-secondary/20' : ''}`}
                   >
                     <Link
-                      href={`/expertise/${area.id}`}
+                      href={`/practices/${area.id}`}
                       className=""
                     >
                     <div className="flex flex-col p-3 gap-3">
@@ -160,7 +161,7 @@ export default function PracticeSection({
               key={domain.id}
               className="group relative hover:shadow-xl transition-all duration-300 bg-white p-6 rounded-lg border border-gray-200 hover:border-primary-700"
             >
-              <Link href={`/expertise/${domain.category.id}`}>
+              <Link href={`/practices/${domain.id}`}>
                 <div className="flex flex-col gap-4">
                   {/* Icône de la catégorie */}
                   <div className="flex p-2 items-center justify-center w-max rounded-full bg-primary-700/10 text-primary-700 transition-all">

@@ -4,8 +4,12 @@ import Link from "next/link"
 import { Mail, Phone, MapPin } from "lucide-react"
 import Image from "next/image"
 import { COMPANY_INFO } from "@/constants/company"
+import { useStore } from "@/hooks/use-language"
+import { NAV_DICT, COMMON_DICT } from "@/hooks/dictionnary"
 
 export function Footer() {
+  const { language } = useStore()
+
   return (
     <footer className="bg-secondary-950 text-white pt-10">
       {/* Main Footer */}
@@ -17,7 +21,7 @@ export function Footer() {
               <Image src="/logoblanc.png" alt="Lexavik Logo" width={500} height={500} className="w-52 h-auto" />
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Cabinet d&apos;avocats créé en avril 2015, spécialisé en droit des affaires. Nous intervenons à Paris et à Abidjan pour sécuriser vos projets et vous défendre devant les juridictions nationales et internationales.
+              {NAV_DICT.FooterDescription[language]}
             </p>
             <div className="flex gap-4">
               <a
@@ -58,36 +62,36 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Liens Rapides</h3>
+            <h3 className="text-xl font-semibold mb-6">{NAV_DICT.QuickLinks[language]}</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/practices" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  Domaines d&apos;Intervention
+                  {NAV_DICT.PracticeAreas[language]}
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  À Propos
+                  {NAV_DICT.AboutUs[language]}
                 </Link>
               </li>
               <li>
                 <Link href="/team" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  Notre Équipe
+                  {NAV_DICT.OurTeam[language]}
                 </Link>
               </li>
               <li>
                 <Link href="/news" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  Actualités & Insights
+                  {NAV_DICT.NewsInsights[language]}
                 </Link>
               </li>
               <li>
                 <Link href="/locations" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  Nos Bureaux
+                  {NAV_DICT.OurOffices[language]}
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  Contact
+                  {NAV_DICT.Contact[language]}
                 </Link>
               </li>
             </ul>
@@ -95,31 +99,31 @@ export function Footer() {
 
           {/* Practices */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Expertises</h3>
+            <h3 className="text-xl font-semibold mb-6">{NAV_DICT.Expertise[language]}</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/practices#ohada-law" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  Droit OHADA
+                  {NAV_DICT.OHADALaw[language]}
                 </Link>
               </li>
               <li>
                 <Link href="/practices#corporate-law" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  Droit des Sociétés
+                  {NAV_DICT.CorporateLaw[language]}
                 </Link>
               </li>
               <li>
                 <Link href="/practices#banking-finance" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  Droit Bancaire & Financier
+                  {NAV_DICT.BankingFinancialLaw[language]}
                 </Link>
               </li>
               <li>
                 <Link href="/practices#major-projects" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  Grands Projets
+                  {NAV_DICT.MajorProjects[language]}
                 </Link>
               </li>
               <li>
                 <Link href="/practices#litigation-arbitration" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  Contentieux & Arbitrage
+                  {NAV_DICT.LitigationArbitration[language]}
                 </Link>
               </li>
             </ul>
@@ -127,7 +131,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Contactez-nous</h3>
+            <h3 className="text-lg font-semibold text-white mb-6">{COMMON_DICT.ContactUs[language]}</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary-600 mt-1 mr-3 shrink-0" />
@@ -156,16 +160,16 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">Copyright © 2025 LEXAVIK - Tous droits réservés</p>
+            <p className="text-gray-400 text-sm">{COMMON_DICT.Copyright[language]}</p>
             <div className="flex gap-6 text-sm">
               <Link href="/legal/privacy" className="text-gray-400 hover:text-primary-600 transition-colors">
-                Politique de Confidentialité
+                {COMMON_DICT.PrivacyPolicy[language]}
               </Link>
               <Link href="/legal/terms" className="text-gray-400 hover:text-primary-600 transition-colors">
-                Mentions Légales
+                {COMMON_DICT.LegalNotice[language]}
               </Link>
               <Link href="/legal/cookies" className="text-gray-400 hover:text-primary-600 transition-colors">
-                Cookies
+                {COMMON_DICT.Cookies[language]}
               </Link>
             </div>
           </div>

@@ -20,9 +20,7 @@ export default function PracticesPage() {
       <HeroBanner
         subtitle={PRACTICES_DICT.PracticeAreas[language]}
         title={PRACTICES_DICT.OurPractices[language]}
-        description={language === 'fr'
-          ? "Dans un contexte de mondialisation et de développement croissant des échanges commerciaux, l'optimisation et la bonne gouvernance s'imposent comme un impératif. Le cabinet LEXAVIK accompagne ses clients tant en conseil qu'en contentieux."
-          : "In a context of globalization and growing commercial exchanges, optimization and good governance are imperative. LEXAVIK supports its clients in both advisory and litigation matters."}
+        description={PRACTICES_DICT.HeroDescription[language]}
         className="pt-32"
       />
 
@@ -31,13 +29,13 @@ export default function PracticesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="">
             <h3 className="text-2xl font-medium text-secondary mb-6">
-              {language === 'fr' ? "Rechercher un domaine d'expertise" : "Search for an area of expertise"}
+              {PRACTICES_DICT.SearchForExpertise[language]}
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               {/* Catégorie Select */}
               <div>
                 <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-2">
-                  {language === 'fr' ? "Catégorie" : "Category"}
+                  {PRACTICES_DICT.Category[language]}
                 </label>
                 <select
                   id="category"
@@ -46,7 +44,7 @@ export default function PracticesPage() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-700 focus:border-transparent"
                 >
                   <option value="">
-                    {language === 'fr' ? "Toutes les catégories" : "All categories"}
+                    {PRACTICES_DICT.AllCategories[language]}
                   </option>
                   {EXPERTISE_POLES.map((pole) => (
                     <option key={pole.id} value={pole.id}>
@@ -59,7 +57,7 @@ export default function PracticesPage() {
               {/* Domaine Input */}
               <div>
                 <label htmlFor="domain" className="block text-sm font-medium text-gray-700 mb-2">
-                  {language === 'fr' ? "Domaine" : "Domain"}
+                  {PRACTICES_DICT.Domain[language]}
                 </label>
                 <div className="relative">
                   <input
@@ -67,7 +65,7 @@ export default function PracticesPage() {
                     type="text"
                     value={searchDomain}
                     onChange={(e) => setSearchDomain(e.target.value)}
-                    placeholder={language === 'fr' ? "Rechercher un domaine..." : "Search for a domain..."}
+                    placeholder={PRACTICES_DICT.SearchDomain[language]}
                     className="w-full px-4 py-3 pl-11 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-700 focus:border-transparent"
                   />
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />

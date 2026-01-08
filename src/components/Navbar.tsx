@@ -9,7 +9,7 @@ import {
     SheetTitle,
     SheetTrigger,
   } from "@/components/ui/sheet"
-import { Menu } from "lucide-react"
+import { Menu, Globe } from "lucide-react"
 import { navbar_links } from "@/constants/navbar"
 import { useStore } from "@/hooks/use-language"
 import Link from "next/link"
@@ -30,10 +30,11 @@ import {
 import { usePathname } from "next/navigation"
 import { Button } from "./ui/button"
 import { useEffect, useState } from "react"
+import { COMMON_DICT } from "@/hooks/dictionnary"
 
 
 export const Navbar = () => {
-    const {language} = useStore()
+    const {language, changeLanguage} = useStore()
     const pathname = usePathname()
     const [isScrolled, setIsScrolled] = useState(false);
     useEffect(() => {
@@ -103,13 +104,71 @@ export const Navbar = () => {
                         </NavigationMenuList>
                     </NavigationMenu>
 
-                    <Button className="hidden xl:block">
-                        <Link href="/contact">Prendre rendez-vous</Link>
-                    </Button>
+                    <div className="hidden xl:flex flex-row gap-4 items-center">
+                        {/* Language Selector */}
+                        <div className="flex gap-2">
+                            <button
+                                onClick={() => changeLanguage('fr')}
+                                className={`px-3 py-1 rounded text-sm font-medium transition-all ${
+                                    language === 'fr'
+                                        ? 'bg-primary-600 text-white'
+                                        : isScrolled
+                                            ? 'text-gray-600 hover:text-primary-600'
+                                            : 'text-white/80 hover:text-white'
+                                }`}
+                            >
+                                FR
+                            </button>
+                            <button
+                                onClick={() => changeLanguage('en')}
+                                className={`px-3 py-1 rounded text-sm font-medium transition-all ${
+                                    language === 'en'
+                                        ? 'bg-primary-600 text-white'
+                                        : isScrolled
+                                            ? 'text-gray-600 hover:text-primary-600'
+                                            : 'text-white/80 hover:text-white'
+                                }`}
+                            >
+                                EN
+                            </button>
+                        </div>
+
+                        <Button>
+                            <Link href="/contact">{COMMON_DICT.ScheduleAppointment[language]}</Link>
+                        </Button>
+                    </div>
 
                     <div className="flex flex-row gap-4 sm:gap-10 relative xl:hidden">
+                        {/* Language Selector Mobile */}
+                        <div className="flex gap-2">
+                            <button
+                                onClick={() => changeLanguage('fr')}
+                                className={`px-2 py-1 rounded text-xs font-medium transition-all ${
+                                    language === 'fr'
+                                        ? 'bg-primary-600 text-white'
+                                        : isScrolled
+                                            ? 'text-gray-600 hover:text-primary-600'
+                                            : 'text-white/80 hover:text-white'
+                                }`}
+                            >
+                                FR
+                            </button>
+                            <button
+                                onClick={() => changeLanguage('en')}
+                                className={`px-2 py-1 rounded text-xs font-medium transition-all ${
+                                    language === 'en'
+                                        ? 'bg-primary-600 text-white'
+                                        : isScrolled
+                                            ? 'text-gray-600 hover:text-primary-600'
+                                            : 'text-white/80 hover:text-white'
+                                }`}
+                            >
+                                EN
+                            </button>
+                        </div>
+
                         <Button className="hidden lg:block">
-                            <Link href="/contact">Prendre rendez-vous</Link>
+                            <Link href="/contact">{COMMON_DICT.ScheduleAppointment[language]}</Link>
                         </Button>
         
                         <Sheet>
