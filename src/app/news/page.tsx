@@ -1,10 +1,15 @@
+"use client"
+
 import { ArrowRight, Calendar } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { NEWS_ARTICLES } from "@/constants/company"
-import HeroBanner from "@/components/HeroBanner";
+import HeroBanner from "@/components/HeroBanner"
+import { useStore } from "@/hooks/use-language"
+import { NEWS_DICT, COMMON_DICT } from "@/hooks/dictionnary"
 
 export default function NewsPage() {
+  const { language } = useStore();
   // Duplicate articles to have more content for demonstration
   const allArticles = [...NEWS_ARTICLES, ...NEWS_ARTICLES, ...NEWS_ARTICLES, ...NEWS_ARTICLES];
 
@@ -12,9 +17,9 @@ export default function NewsPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <HeroBanner
-        subtitle="Actualités"
-        title="Restez informé"
-        description="Retrouvez toutes nos actualités, nos publications et les dernières évolutions juridiques qui pourraient vous concerner."
+        subtitle={NEWS_DICT.News[language]}
+        title={NEWS_DICT.StayInformed[language]}
+        description={NEWS_DICT.NewsDescription[language]}
         overlayColor="secondary"
         overlayOpacity={55}
         className="pt-32"
@@ -40,14 +45,14 @@ export default function NewsPage() {
                   <div className="relative h-48 bg-gray-200 overflow-hidden">
                     <Image
                       src={article.image || "/logo.png"}
-                      alt={article.title.fr}
+                      alt={article.title[language]}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4">
                       <span className="bg-primary-700 text-white text-xs font-medium px-3 py-1 rounded-full">
-                        {article.category.fr}
+                        {article.category[language]}
                       </span>
                     </div>
                   </div>
@@ -62,12 +67,12 @@ export default function NewsPage() {
 
                     {/* Title */}
                     <h2 className="text-xl font-medium text-secondary mb-3 group-hover:text-primary-700 transition-colors line-clamp-2">
-                      {article.title.fr}
+                      {article.title[language]}
                     </h2>
 
                     {/* Excerpt */}
                     <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                      {article.excerpt.fr}
+                      {article.excerpt[language]}
                     </p>
 
                     {/* Read More Link */}
@@ -75,7 +80,7 @@ export default function NewsPage() {
                       href={`/news/${article.slug}`}
                       className="inline-flex items-center text-primary-700 font-medium hover:text-primary-800 transition-colors"
                     >
-                      Lire la suite
+                      {NEWS_DICT.ReadMore[language]}
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </div>

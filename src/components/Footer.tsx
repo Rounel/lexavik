@@ -16,7 +16,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About Section */}
-          <div>
+          <div className="max-w-sm">
             <div className="flex items-center justify-center -mt-9">
               <Image src="/logoblanc.png" alt="Lexavik Logo" width={500} height={500} className="w-52 h-auto" />
             </div>

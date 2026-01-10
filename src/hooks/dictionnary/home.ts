@@ -116,5 +116,25 @@ export const HOME_DICT: HomeDictProps = {
   UseSearchFields: {
     en: "Use the search fields to find the expertise that matches your needs.",
     fr: "Utilisez les champs de recherche pour trouver l'expertise qui correspond à vos besoins."
+  },
+
+  // CTA Section
+  NeedLegalAdvice: {
+    en: "Need Legal Advice?",
+    fr: "Besoin de Conseil Juridique ?"
+  },
+  CTADescription: {
+    en: "Our experts are here to help. Contact us today for a consultation.",
+    fr: "Nos experts sont là pour vous aider. Contactez-nous dès aujourd'hui pour une consultation."
+  },
+
+  // Testimonials Section
+  OurTestimonials: {
+    en: "Our Testimonials",
+    fr: "Nos Témoignages"
+  },
+  HappyClientsReview: {
+    en: "Our happy client's review",
+    fr: "Les avis de nos clients satisfaits"
   }
 }

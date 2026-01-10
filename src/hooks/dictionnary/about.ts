@@ -165,4 +165,24 @@ export const ABOUT_DICT: AboutDictProps = {
     en: "Contact Us",
     fr: "Nous Contacter"
   },
+
+  // Values Section
+  ValuesGuidingUs: {
+    en: "The Values That Guide Us",
+    fr: "Les Valeurs Qui Nous Guident"
+  },
+
+  // CTA Section
+  WorkTogether: {
+    en: "Let's Work Together",
+    fr: "Travaillons Ensemble"
+  },
+  WorkTogetherDesc: {
+    en: "Discover how LEXAVIK can support you in your legal projects.",
+    fr: "Découvrez comment LEXAVIK peut vous accompagner dans vos projets juridiques."
+  },
+  MeetTheTeam: {
+    en: "Meet the Team",
+    fr: "Rencontrer l'Équipe"
+  }
 }

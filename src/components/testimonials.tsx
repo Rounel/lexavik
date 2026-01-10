@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { useStore } from "@/hooks/use-language"
+import { HOME_DICT, COMMON_DICT } from "@/hooks/dictionnary"
 
 const testimonials = [
   {
@@ -21,6 +23,7 @@ const testimonials = [
 ]
 
 export default function TestimonialsSection() {
+  const { language } = useStore();
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const goToPrevious = () => {
@@ -41,13 +44,13 @@ export default function TestimonialsSection() {
           {/* Left Column */}
           <div className="space-y-8">
             <div>
-              <p className="text-primary-700 font-medium mb-2 text-sm uppercase tracking-wide">← Our Testimonials</p>
+              <p className="text-primary-700 font-medium mb-2 text-sm uppercase tracking-wide">← {HOME_DICT.OurTestimonials[language]}</p>
               <h1 className="text-[#0F1F35] font-serif text-4xl lg:text-5xl leading-tight">
-                Our happy client&apos;s review
+                {HOME_DICT.HappyClientsReview[language]}
               </h1>
             </div>
             <button className="bg-[#0F1F35] hover:bg-[#1a2f45] transition-colors text-white px-8 py-3 font-semibold uppercase tracking-wide text-sm">
-              Read More
+              {COMMON_DICT.ReadMore[language]}
             </button>
           </div>
 

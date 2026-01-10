@@ -124,7 +124,7 @@ function TeamPreview() {
 
   return (
     <div className="bg-secondary-950 px-4 py-20 sm:px-6 lg:px-8 font-[family-name:var(--font-dm-sans)]">
-      <div className="mx-auto max-w-360 gap-10 flex justify-between">
+      <div className="mx-auto max-w-360 gap-10 flex justify-between flex-col lg:flex-row">
         {/* Header */}
         <div className="max-w-lg flex flex-col justify-between">
           <div className="">
@@ -143,7 +143,7 @@ function TeamPreview() {
         </div>
 
         {/* Team Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="hidden sm:grid gap-6 sm:grid-cols-3 lg:grid-cols-3">
           {TEAM_MEMBERS.filter(member => member.status === 'associate').map((member, index) => (
             <div key={member.id} className="group relative overflow-hidden rounded-lg bg-white transition-all hover:shadow-xl">
               <div className="relative aspect-3/4 w-full h-100 overflow-hidden">
@@ -176,7 +176,7 @@ function ProcessSection() {
   return (
     <div className="py-20 bg-[url('/1.jpg')] w-full bg-cover bg-center bg-no-repeat font-(family-name:--font-dm-sans) relative">
       <div className="absolute top-0 left-0 h-full w-full bg-black/60"></div>
-      <div className="mx-auto w-full max-w-360 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 relative">
+      <div className="mx-auto w-full max-w-360 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 relative px-4 md:px-8 lg:px-0">
         {/* Header */}
         <div className="sticky top-0 left-0">
           <div className="max-h-max sticky top-0 left-0">

@@ -120,7 +120,7 @@ export default function AboutPage() {
               {ABOUT_DICT.OurValues[language]}
             </span>
             <h2 className="text-4xl font-semibold text-secondary lg:text-5xl mb-6 ">
-              {language === 'fr' ? "Les Valeurs Qui Nous Guident" : "The Values That Guide Us"}
+              {ABOUT_DICT.ValuesGuidingUs[language]}
             </h2>
           </div>
 
@@ -163,12 +163,10 @@ export default function AboutPage() {
       <div className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-light text-secondary mb-6">
-            {language === 'fr' ? "Travaillons Ensemble" : "Let's Work Together"}
+            {ABOUT_DICT.WorkTogether[language]}
           </h2>
           <p className="text-gray-600 mb-8 text-lg">
-            {language === 'fr'
-              ? "Découvrez comment LEXAVIK peut vous accompagner dans vos projets juridiques."
-              : "Discover how LEXAVIK can support you in your legal projects."}
+            {ABOUT_DICT.WorkTogetherDesc[language]}
           </p>
           <div className="flex gap-4 justify-center">
             <Link href="/contact">
@@ -179,7 +177,7 @@ export default function AboutPage() {
             </Link>
             <Link href="/team">
               <Button className="group rounded bg-primary-700 px-8 py-6 text-white hover:bg-primary-800 transition-all">
-                {language === 'fr' ? "Rencontrer l'Équipe" : "Meet the Team"}
+                {ABOUT_DICT.MeetTheTeam[language]}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </Link>

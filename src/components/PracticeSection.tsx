@@ -69,9 +69,7 @@ export default function PracticeSection({
       <div className="relative min-h-screen bg-linear-to-b from-[#F5F1EB] to-[#FFFAF6] w-full px-4 py-20 sm:px-6 lg:px-8 font-[family-name:var(--font-dm-sans)]">
         <div className="mx-auto max-w-7xl text-center">
           <p className="text-gray-600 text-lg">
-            {language === 'fr'
-              ? "Utilisez les champs de recherche ci-dessus pour trouver un domaine d'expertise."
-              : "Use the search fields above to find an area of expertise."}
+            {HOME_DICT.UseSearchFields[language]}
           </p>
         </div>
       </div>
@@ -82,19 +80,18 @@ export default function PracticeSection({
   if (!isSearchPage) {
     return (
       <div className="relative bg-linear-to-b from-[#F5F1EB] to-[#FFFAF6] w-full px-4 py-20 sm:px-6 lg:px-0 font-[family-name:var(--font-dm-sans)]">
-        <div className="mx-auto max-w-360 flex flex-row">
+        <div className="mx-auto max-w-360 flex flex-col lg:flex-row">
           {/* Header */}
           <div className="flex flex-col mb-16 lg:px-8 w-full">
             <div className="mb-6">
-              <span className="text-primary-700 font-medium mb-2 text-sm uppercase tracking-wide">What We Are Expert At</span>
-              <h2 className="text-4xl font-light text-secondary lg:text-5xl">Legal Practice Areas</h2>
+              <span className="text-primary-700 font-medium mb-2 text-sm uppercase tracking-wide">{HOME_DICT.WhatWeAreExpertAt[language]}</span>
+              <h2 className="text-4xl font-light text-secondary lg:text-5xl">{HOME_DICT.LegalPracticeAreas[language]}</h2>
             </div>
             <p className="text-gray-600 max-w-lg">
-              Notre expertise couvre un large éventail de domaines juridiques.
-              Nous offrons des solutions sur mesure adaptées à vos besoins spécifiques.
+              {HOME_DICT.PracticeDescription[language]}
             </p>
             <Button className="mt-auto self-start">
-              Voir tous nos domaines d'expertise
+              {HOME_DICT.ViewAllPractices[language]}
             </Button>
           </div>
 
@@ -121,14 +118,14 @@ export default function PracticeSection({
                         />
                       </div>
                       <h3 className="text-2xl font-medium text-secondary group-hover:text-primary-700 transition-colors">
-                        {area.title.fr}
+                        {area.title[language]}
                       </h3>
                     </div>
                     <p className="text-gray-600 mb-6 px-3">
-                      {area.description.fr}
+                      {area.description[language]}
                     </p>
                       <div className={`absolute bottom-5 right-5 inline-flex items-center  font-medium hover:text-primary-800 ${index === 0 || index === 3 ? 'text-secondary' : 'text-primary'}`}>
-                        En savoir plus
+                        {COMMON_DICT.LearnMore[language]}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </div>
                     </Link>
@@ -148,9 +145,7 @@ export default function PracticeSection({
       <div className="mx-auto max-w-7xl">
         <div className="mb-8">
           <h3 className="text-2xl font-medium text-secondary">
-            {language === 'fr'
-              ? `${filteredDomains.length} résultat${filteredDomains.length > 1 ? 's' : ''} trouvé${filteredDomains.length > 1 ? 's' : ''}`
-              : `${filteredDomains.length} result${filteredDomains.length > 1 ? 's' : ''} found`}
+            {`${filteredDomains.length} ${COMMON_DICT.ResultsFound[language]}`}
           </h3>
         </div>
 
@@ -187,7 +182,7 @@ export default function PracticeSection({
                   </div>
 
                   <div className="mt-auto pt-2 inline-flex items-center text-primary-700 font-medium hover:text-primary-800 text-sm">
-                    {language === 'fr' ? 'En savoir plus' : 'Learn more'}
+                    {COMMON_DICT.LearnMore[language]}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </div>
                 </div>
