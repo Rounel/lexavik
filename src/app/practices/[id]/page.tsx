@@ -45,14 +45,14 @@ export default function PracticeDetailPage() {
       <HeroBanner
         subtitle={PRACTICES_DICT.PracticeAreas[language]}
         title={practice.title[language]}
-        description={practice.description[language]}
+        // description={practice.description[language]}
         overlayColor="secondary"
         overlayOpacity={55}
         className="pt-32"
       />
 
       {/* Main Content */}
-      <div className="px-4 py-20 sm:px-6 lg:px-8 font-[family-name:var(--font-dm-sans)]">
+      <div className="px-4 py-9 md:py-20 sm:px-6 lg:px-8 font-[family-name:var(--font-dm-sans)]">
         <div className="mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content Column */}

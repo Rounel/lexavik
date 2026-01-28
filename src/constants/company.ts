@@ -557,55 +557,55 @@ export const TEAM_MEMBERS = [
     phone: "+33 (0) 1.53.16.05.40"
   },
   {
-  id: "5",
-  name: "TANOH BEHEGBIN MARIUS",
-  role: {
-    en: "Tax and Social Security Law Specialist",
-    fr: "Spécialiste en Fiscalité et Droits des Prélèvements Sociaux"
+    id: "5",
+    name: "Marius Behegbin TANOH",
+    role: {
+      en: "Tax and Social Security Law Specialist",
+      fr: "Spécialiste en Fiscalité et Droits des Prélèvements Sociaux"
+    },
+    status: "partner",
+    image: "/Photo de TBM.png", // À remplacer par la photo si disponible
+    bio: {
+      en: "Tax and Social Security Law Specialist with experience in legal consulting firms and law firms, including GOGOUA TAX and LEGAL. Currently collaborating with LEXAVIK [FR] and OBENG-KOFI Fian [CI].",
+      fr: "Spécialiste en Fiscalité et Droits des Prélèvements Sociaux avec une expérience en cabinets de conseil et d'avocats, dont le Cabinet GOGOUA TAX and LEGAL. Actuellement collaborateur d'avocats près le cabinet LEXAVIK [FR] et le Cabinet OBENG-KOFI Fian [CI]."
+    },
+    education: {
+      en: "Master's Degree in Tax and Social Security Law (2020-2021)\nLicense in Private Law (2015-2016)\nBaccalaureate A2 (2013)",
+      fr: "Master en Fiscalité et Droits des Prélèvements Sociaux (2020-2021)\nLicence en Droit Privé (2015-2016)\nBaccalauréat série A2 (2013)"
+    },
+    specialization: {
+      en: "Tax Law, Social Security Law, Judicial Career, Private Law",
+      fr: "Droit fiscal, Droits des prélèvements sociaux, Carrière judiciaire, Droit privé"
+    },
+    email: "marius.tanoh@lexavik.com", // À confirmer
+    phone: "+33 (0) 1.53.16.05.40", // À confirmer
+    phone_civ: "+225 00 00 00 00" // À compléter
   },
-  status: "partner",
-  image: "/Photo de TBM.png", // À remplacer par la photo si disponible
-  bio: {
-    en: "Tax and Social Security Law Specialist with experience in legal consulting firms and law firms, including GOGOUA TAX and LEGAL. Currently collaborating with LEXAVIK [FR] and OBENG-KOFI Fian [CI].",
-    fr: "Spécialiste en Fiscalité et Droits des Prélèvements Sociaux avec une expérience en cabinets de conseil et d'avocats, dont le Cabinet GOGOUA TAX and LEGAL. Actuellement collaborateur d'avocats près le cabinet LEXAVIK [FR] et le Cabinet OBENG-KOFI Fian [CI]."
-  },
-  education: {
-    en: "Master's Degree in Tax and Social Security Law (2020-2021)\nLicense in Private Law (2015-2016)\nBaccalaureate A2 (2013)",
-    fr: "Master en Fiscalité et Droits des Prélèvements Sociaux (2020-2021)\nLicence en Droit Privé (2015-2016)\nBaccalauréat série A2 (2013)"
-  },
-  specialization: {
-    en: "Tax Law, Social Security Law, Judicial Career, Private Law",
-    fr: "Droit fiscal, Droits des prélèvements sociaux, Carrière judiciaire, Droit privé"
-  },
-  email: "marius.tanoh@lexavik.com", // À confirmer
-  phone: "+33 (0) 1.53.16.05.40", // À confirmer
-  phone_civ: "+225 00 00 00 00" // À compléter
-},
-{
-  id: "6",
-  name: "KOUAMÉ Konan Saint Serge",
-  role: {
-    en: "Legal Counsel - Doctor of Law",
-    fr: "Juriste collaborateur - Docteur en droit privé"
-  },
-  status: "partner",
-  image: "/Photo - Saint Serge.png", // À remplacer par la photo si disponible
-  bio: {
-    en: "Legal Counsel at LEXAVIK Law Firm. Doctor of Private Law, author of a Thesis on the liability of parent companies for their subsidiaries under OHADA law. Member of the Laboratory of Studies on Law and Development in Côte d'Ivoire (LEDD-CI). Specializes in business law and is a Lecturer-Researcher at Félix Houphouët-Boigny University (Abidjan).",
-    fr: "Juriste collaborateur au sein de LEXAVIK Cabinet d'Avocats. Docteur en droit privé, auteur d'une Thèse sur la responsabilité des sociétés mères du fait de leurs filiales en droit OHADA. Membre du Laboratoire d'Études sur le Droit et le Développement en Côte d'Ivoire (LEDD-CI). Spécialisé en droit des affaires, il est Enseignant-chercheur à l'Université Felix Houphouët-Boigny (Abidjan)."
-  },
-  education: {
-    en: "Doctorate in Private Law",
-    fr: "Doctorat en Droit privé"
-  },
-  specialization: {
-    en: "Business Law, Tax Law, Corporate Law, Labor Law, Personal Status Law, OHADA Law",
-    fr: "Droit des affaires, Droit fiscal, Droit des sociétés, Droit du travail, Droit des personnes, Droit OHADA"
-  },
-  email: "saintserge.kouame@lexavik.com", // À confirmer
-  phone: "+33 (0) 1.53.16.05.40", // À confirmer
-  phone_civ: "+225 00 00 00 00" // À compléter
-}
+  {
+    id: "6",
+    name: "Dr Konan Saint Serge KOUAMÉ",
+    role: {
+      en: "Legal Counsel - Doctor of Law",
+      fr: "Juriste collaborateur - Docteur en droit privé"
+    },
+    status: "partner",
+    image: "/Photo - Saint Serge.png", // À remplacer par la photo si disponible
+    bio: {
+      en: "Legal Counsel at LEXAVIK Law Firm. Doctor of Private Law, author of a Thesis on the liability of parent companies for their subsidiaries under OHADA law. Member of the Laboratory of Studies on Law and Development in Côte d'Ivoire (LEDD-CI). Specializes in business law and is a Lecturer-Researcher at Félix Houphouët-Boigny University (Abidjan).",
+      fr: "Juriste collaborateur au sein de LEXAVIK Cabinet d'Avocats. Docteur en droit privé, auteur d'une Thèse sur la responsabilité des sociétés mères du fait de leurs filiales en droit OHADA. Membre du Laboratoire d'Études sur le Droit et le Développement en Côte d'Ivoire (LEDD-CI). Spécialisé en droit des affaires, il est Enseignant-chercheur à l'Université Felix Houphouët-Boigny (Abidjan)."
+    },
+    education: {
+      en: "Doctorate in Private Law",
+      fr: "Doctorat en Droit privé"
+    },
+    specialization: {
+      en: "Business Law, Tax Law, Corporate Law, Labor Law, Personal Status Law, OHADA Law",
+      fr: "Droit des affaires, Droit fiscal, Droit des sociétés, Droit du travail, Droit des personnes, Droit OHADA"
+    },
+    email: "saintserge.kouame@lexavik.com", // À confirmer
+    phone: "+33 (0) 1.53.16.05.40", // À confirmer
+    phone_civ: "+225 00 00 00 00" // À compléter
+  }
 ] as const;
 
 export const NEWS_ARTICLES = [

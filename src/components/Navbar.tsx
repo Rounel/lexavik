@@ -176,13 +176,13 @@ export const Navbar = () => {
                             <SheetContent side={"left"} className="w-[400px] sm:w-[540px] overflow-y-auto xl:bg-tertiary xl:px-0">
                                 <SheetHeader>
                                     <SheetTitle className="xl:px-8">
-                                        <Image src={"/rifen-logo.png"} alt="Logo du RIFEN" width={150} height={60} />
+                                        <Image src={"/logo.png"} alt="LEXAVIK" width={150} height={60} />
                                     </SheetTitle>
                                     <SheetDescription>
                                         <div className="flex flex-col text-left mt-8 sm:hidden">
                                             {
                                                 navbar_links.map(link => link.sub.length == 0 ? (
-                                                    <Link className="text-tertiary hover:text-secondary py-2 text-lg border-b-[1px] last:border-b-0" key={link.label[language]} href={link.link}>
+                                                    <Link className="font-medium text-tertiary hover:text-secondary py-4 text-lg border-b last:border-b-0" key={link.label[language]} href={link.link}>
                                                         {link.label[language]}
                                                     </Link>
                                                 ) : (

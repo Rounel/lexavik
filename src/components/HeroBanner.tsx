@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 interface HeroBannerProps {
   title: string;
   subtitle: string;
-  description: string;
+  description?: string;
   overlayColor?: string;
   overlayOpacity?: number;
   className?: string;
@@ -20,7 +20,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
 }) => {
   return (
     <div 
-      className={`relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-[url('../../public//1.jpg')] bg-cover ${className}`}
+      className={`relative pt-40 md:pt-32 pb-10 md:pb-20 px-4 sm:px-6 lg:px-8 bg-[url('../../public//1.jpg')] bg-cover ${className}`}
     >
       <div 
         className={cn(`absolute inset-0 bg-secondary-950/90 size-full`)}

@@ -61,7 +61,7 @@ export default function TeamPage() {
       <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="">
-            <h3 className="text-2xl font-medium text-secondary mb-6">
+            <h3 className="text-2xl font-medium text-gray-700 mb-6">
               {TEAM_DICT.SearchLawyer[language]}
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
@@ -118,7 +118,7 @@ export default function TeamPage() {
           )}
 
           {/* Associate grid */}
-          <div className={`${filteredMembers[0].length > 0 ? '' : 'hidden'} w-full py-3 border-b border-gray-500 mb-3 text-lg font-bold text-secondary-950`}>
+          <div className={`${filteredMembers[0].length > 0 ? '' : 'hidden'} w-full py-3 border-b border-gray-500 mb-3 text-2xl font-bold text-secondary`}>
             {TEAM_DICT.Partners[language]}
           </div>
           {filteredMembers[0].length > 0 ? (
@@ -136,7 +136,7 @@ export default function TeamPage() {
           )}
 
           {/* Partners grid */}
-          <div className={`${filteredMembers[1].length > 0 ? '' : 'hidden'} w-full py-3 border-b border-gray-500 mt-10 mb-3 text-lg font-bold text-secondary-950`}>
+          <div className={`${filteredMembers[1].length > 0 ? '' : 'hidden'} w-full py-3 border-b border-gray-500 mt-10 mb-3 text-2xl font-bold text-secondary`}>
             {TEAM_DICT.Associates[language]}
           </div>
           {filteredMembers[1].length > 0 ? (
@@ -191,7 +191,7 @@ function TeamMemberCard({ member, language }: TeamMemberCardProps) {
   return (
     <div className="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
       {/* Image */}
-      <div className="relative aspect-3/4 overflow-hidden bg-gray-200">
+      <div className="relative h-90 md:aspect-3/4 overflow-hidden bg-gray-200">
         <Image
           src={member.image}
           alt={member.name}
