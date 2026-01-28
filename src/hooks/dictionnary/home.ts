@@ -30,8 +30,8 @@ export const HOME_DICT: HomeDictProps = {
     fr: "Créé en avril 2015, le Cabinet d'Avocats LEXAVIK offre un service juridique complet et des solutions adaptées à vos préoccupations."
   },
   FieldExperience: {
-    en: "With field-acquired experience, LEXAVIK Law Firm masters European business law, OHADA law, including company law, contract law, enforcement proceedings, and various community regulations (CEMAC, UEMOA, CIMA, OAPI).",
-    fr: "Riche d'une expérience acquise sur le terrain, le Cabinet d'Avocats LEXAVIK maîtrise outre, le droit européen des affaires, le droit OHADA, et en ce, le droit des sociétés, le droit des contrats, les voies d'exécution ainsi que les différentes réglementations communautaires (CEMAC, UEMOA, CIMA, OAPI)."
+    en: "Composed of a multidisciplinary team and drawing on extensive field experience, LEXAVIK Law Firm specializes not only in European business law but also in OHADA law, including corporate law, contract law, enforcement proceedings, as well as various community regulations (CEMAC, UEMOA, CIMA, OAPI).",
+    fr: "Composé d'une équipe pluridisciplinaire, LEXAVIK et d'une expérience acquise sur le terrain, le Cabinet d'Avocats LEXAVIK maîtrise outre, le droit européen des affaires, le droit OHADA, et en ce, le droit des sociétés, le droit des contrats, les voies d'exécution ainsi que les différentes réglementations communautaires (CEMAC, UEMOA, CIMA, OAPI)."
   },
 
   // Features
@@ -48,12 +48,12 @@ export const HOME_DICT: HomeDictProps = {
     fr: "Présence Internationale"
   },
   InternationalPresenceDesc: {
-    en: "Offices in Paris and Abidjan, partners across Africa",
-    fr: "Bureaux à Paris et Abidjan, partenaires en Afrique"
+    en: "Offices in Paris and partners across Africa",
+    fr: "Bureaux à Paris et des partenaires en Afrique"
   },
   CompleteService: {
-    en: "Complete Service",
-    fr: "Service Complet"
+    en: "Complete Legal Service",
+    fr: "Service Juridique Complet"
   },
   CompleteServiceDesc: {
     en: "From advisory to defense in national and international litigation",

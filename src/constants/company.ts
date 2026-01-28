@@ -460,18 +460,18 @@ export const EXPERTISE_POLES = [
 export const TEAM_MEMBERS = [
   {
     id: "1",
-    name: "Simplice KASSI",
+    name: "Me Simplice KASSI",
     role: {
-      en: "Lawyer - Doctor of Law",
-      fr: "Avocat - Docteur en droit"
+      en: "Doctor of Law",
+      fr: "Docteur en droit"
     },
     education: {
       en: "Doctor of Law",
       fr: "Docteur en droit"
     },
     specialization: {
-      en: "Corporate Law, Tax Law, Banking & Finance, OHADA Law, Real Estate, Immigration, Family Law, Labor Law, Criminal Law, Digital Law, Energy & Mining, Environment",
-      fr: "Droit des sociétés, Droit fiscal et contentieux fiscal, Droit bancaire et financier, Droit OHADA, Droit de l'immobilier, Droit des étrangers et de la nationalité, Droit des personnes et de la famille, Droit du travail, Droit pénal, Droit du numérique, Energies & Mines, Environnement"
+      en: "Simplice KASSI, PhD in Law, is a Lecturer at Alassane Ouattara University in Bouaké, Côte d’Ivoire. Admitted to the Bar on March 5, 2014, he is a founding member of LEXAVIK. His practice areas include corporate law, tax law and tax litigation, banking and finance law, OHADA law, real estate law, as well as Energy, Mining, and Telecommunications law.",
+      fr: "Me Simplice KASSI, est docteur en Droit. Il est chargé de cours à l'Université ALLASANE OUATTARA de Bouaké en Côte d'Ivoire. Il a preté serment le 05/03/2014. Il intervient en Droit des sociétés, Droit fiscal et contentieux fiscal, Droit bancaire et financier, Droit OHADA, Droit de l'immobilier,  Energies & Mines et des télécommunications. Il est membre fondateur de LEXAVIK."
     },
     image: "/team (5).jpeg",
     bio: {
@@ -487,16 +487,16 @@ export const TEAM_MEMBERS = [
     id: "3",
     name: "Nanga SILUE",
     role: {
-      en: "Lawyer - Agrégé des facultés de droit",
-      fr: "Avocat - Agrégé des facultés de droit"
+      en: "Agrégé Professor",
+      fr: "Professeur Agrégé"
     },
     education: {
       en: "Agrégé des facultés de droit",
       fr: "Agrégé des facultés de droit"
     },
     specialization: {
-      en: "Business Law, Academic Law, Legal Research",
-      fr: "Droit des affaires, Droit académique, Recherche juridique"
+      en: "Professor Nanga SILUÉ is an Associate Professor of Law and the Dean of the Faculty of Law at Alassane Ouattara University in Bouaké, Côte d’Ivoire. Admitted to the Bar on November 22, 2012, he joined LEXAVIK in 2024. His expertise includes OHADA law, social and labor law, as well as environmental law.",
+      fr: "Me Nanga SILUE est agrégé des écoles de Droit, Doyen de la faculté de Droit de l'Université ALLASANE OUATTARA de Bouaké en Côte d'Ivoire); Il a preté serment le 22/11/2012. Il intervient en Droit OHADA, Droit social et du travail, Droit OHADA, Droit de l'environnement. Il a rejoint LEXAVIK en 2024. "
     },
     image: "/team (3).jpeg",
     bio: {
@@ -511,16 +511,16 @@ export const TEAM_MEMBERS = [
     id: "2",
     name: "Anthony OBENG-KOFI",
     role: {
-      en: "Lawyer - Doctor of Law",
-      fr: "Avocat - Docteur en droit"
+      en: "Doctor of Law",
+      fr: "Docteur en droit"
     },
     education: {
       en: "Doctor of Law",
       fr: "Docteur en droit"
     },
     specialization: {
-      en: "Business Law, OHADA Law, Project Finance, International Law",
-      fr: "Droit des affaires, Droit OHADA, Financement de projets, Droit international"
+      en: "Anthony OBENG-KOFI, PhD in Law, is a Senior Lecturer at Péléforo Gon Coulibaly University in Korhogo. Admitted to the Bar on January 28, 2016, he specializes in immigration and nationality law, family law, OHADA law, corporate law, and project finance.",
+      fr: "Me Anthony OBENG-KOFI, est Docteur en Droit. Il est chargé de cours à l'Université Gon Coulibaly de Korhogo. Il a preté serment le 28/01/2016. Il intervient en droit des étrangers et de la nationalité, en droit de la famille, en droit OHADA et en droit des sociétés ainsi qu'en financement de projet.  "
     },
     image: "/team (4).jpeg",
     bio: {
@@ -574,8 +574,8 @@ export const TEAM_MEMBERS = [
       fr: "Master en Fiscalité et Droits des Prélèvements Sociaux (2020-2021)\nLicence en Droit Privé (2015-2016)\nBaccalauréat série A2 (2013)"
     },
     specialization: {
-      en: "Tax Law, Social Security Law, Judicial Career, Private Law",
-      fr: "Droit fiscal, Droits des prélèvements sociaux, Carrière judiciaire, Droit privé"
+      en: "Legal Counsel specializing in Tax Law and Social Security Contributions.",
+      fr: "Juriste spécialisé en Droit fiscal, Droits des prélèvements sociaux."
     },
     email: "marius.tanoh@lexavik.com", // À confirmer
     phone: "+33 (0) 1.53.16.05.40", // À confirmer
@@ -599,8 +599,8 @@ export const TEAM_MEMBERS = [
       fr: "Doctorat en Droit privé"
     },
     specialization: {
-      en: "Business Law, Tax Law, Corporate Law, Labor Law, Personal Status Law, OHADA Law",
-      fr: "Droit des affaires, Droit fiscal, Droit des sociétés, Droit du travail, Droit des personnes, Droit OHADA"
+      en: "Expertise: Business Law, Tax Law, Corporate Law, Labor Law, and OHADA Law.",
+      fr: "Droit des affaires, Droit fiscal, Droit des sociétés, Droit du travail, Droit OHADA."
     },
     email: "saintserge.kouame@lexavik.com", // À confirmer
     phone: "+33 (0) 1.53.16.05.40", // À confirmer

@@ -8,6 +8,7 @@ import Image from "next/image"
 import { EXPERTISE_POLES } from "@/constants/company"
 import { useMemo } from "react"
 import { HOME_DICT, COMMON_DICT } from "@/hooks/dictionnary"
+import { useSearchParams } from "next/navigation"
 
 interface PracticeSectionProps {
   selectedCategory?: string;
@@ -21,11 +22,18 @@ export default function PracticeSection({
   isSearchPage = false
 }: PracticeSectionProps) {
   const { language } = useStore();
+  const searchParams = useSearchParams();
+
+  // Récupérer le paramètre "pole" de l'URL
+  const poleParam = searchParams.get("pole");
 
   // Filtrer les domaines en fonction des critères de recherche
   const filteredDomains = useMemo(() => {
+    // Utiliser le paramètre URL "pole" en priorité, sinon utiliser selectedCategory
+    const categoryToUse = poleParam || selectedCategory;
+
     // Si on est sur la page de recherche et qu'il n'y a pas de critères, ne rien afficher
-    if (isSearchPage && !selectedCategory && !searchDomain) {
+    if (isSearchPage && !categoryToUse && !searchDomain) {
       return [];
     }
 
@@ -37,8 +45,8 @@ export default function PracticeSection({
     }> = [];
 
     // Si une catégorie est sélectionnée, ne prendre que les domaines de cette catégorie
-    const polesToSearch = selectedCategory
-      ? EXPERTISE_POLES.filter(pole => pole.id === selectedCategory)
+    const polesToSearch = categoryToUse
+      ? EXPERTISE_POLES.filter(pole => pole.id === categoryToUse)
       : EXPERTISE_POLES;
 
     // Construire la liste de domaines avec leur catégorie
@@ -61,7 +69,7 @@ export default function PracticeSection({
     }
 
     return allDomains;
-  }, [selectedCategory, searchDomain, language, isSearchPage]);
+  }, [selectedCategory, searchDomain, language, isSearchPage, poleParam]);
 
   // Si on est sur la page de recherche et qu'il n'y a aucun résultat, afficher un message
   if (isSearchPage && filteredDomains.length === 0) {
@@ -82,8 +90,8 @@ export default function PracticeSection({
       <div className="relative bg-linear-to-b from-[#F5F1EB] to-[#FFFAF6] w-full px-4 py-20 sm:px-6 lg:px-0 font-[family-name:var(--font-dm-sans)]">
         <div className="mx-auto max-w-360 flex flex-col lg:flex-row">
           {/* Header */}
-          <div className="flex flex-col mb-16 lg:px-8 w-full">
-            <div className="mb-6">
+          <div className="flex flex-col mb-16 lg:px-8 w-full gap-6">
+            <div className="">
               <span className="text-primary-700 font-medium mb-2 text-sm uppercase tracking-wide">{HOME_DICT.WhatWeAreExpertAt[language]}</span>
               <h2 className="text-4xl font-light text-secondary lg:text-5xl">{HOME_DICT.LegalPracticeAreas[language]}</h2>
             </div>
@@ -91,7 +99,9 @@ export default function PracticeSection({
               {HOME_DICT.PracticeDescription[language]}
             </p>
             <Button className="mt-auto self-start">
-              {HOME_DICT.ViewAllPractices[language]}
+              <Link href="/practices">
+                {HOME_DICT.ViewAllPractices[language]}
+              </Link>
             </Button>
           </div>
 
@@ -101,10 +111,10 @@ export default function PracticeSection({
               return (
                   <div
                     key={area.id}
-                    className={`group relative hover:shadow-2xl hover:border-primary-700 transition-all duration-300 h-70 ${index === 0 || index === 3 ? 'bg-secondary/20' : ''}`}
+                    className={`group relative hover:shadow-2xl hover:border-primary-700 transition-all duration-300 h-70 ${index === 0 || index === 3 ? 'bg-secondary/20' : 'bg-primary/20'}`}
                   >
                     <Link
-                      href={`/practices/${area.id}`}
+                      href={`/practices?poles=${area.id}`}
                       className=""
                     >
                     <div className="flex flex-col p-3 gap-3">

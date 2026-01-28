@@ -80,21 +80,21 @@ function AboutSection() {
             {/* Key Features */}
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-3">
-                <CheckCircle2 className="h-6 w-6 text-primary-700 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="h-6 w-6 text-primary-700 shrink-0 mt-1" />
                 <div>
                   <h4 className="font-medium text-secondary mb-1">{HOME_DICT.OHADAExpertise[language]}</h4>
                   <p className="text-gray-600 text-sm">{HOME_DICT.OHADAExpertiseDesc[language]}</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <CheckCircle2 className="h-6 w-6 text-primary-700 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="h-6 w-6 text-primary-700 shrink-0 mt-1" />
                 <div>
                   <h4 className="font-medium text-secondary mb-1">{HOME_DICT.InternationalPresence[language]}</h4>
                   <p className="text-gray-600 text-sm">{HOME_DICT.InternationalPresenceDesc[language]}</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <CheckCircle2 className="h-6 w-6 text-primary-700 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="h-6 w-6 text-primary-700 shrink-0 mt-1" />
                 <div>
                   <h4 className="font-medium text-secondary mb-1">{HOME_DICT.CompleteService[language]}</h4>
                   <p className="text-gray-600 text-sm">{HOME_DICT.CompleteServiceDesc[language]}</p>

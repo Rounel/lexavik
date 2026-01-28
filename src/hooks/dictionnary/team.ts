@@ -51,13 +51,17 @@ export const TEAM_DICT: TeamDictProps = {
   },
 
   // Categories
-  Partners: {
-    en: "Partners",
-    fr: "Associés"
+  Collaborators: {
+    en: "Collaborators",
+    fr: "Collaborateurs"
   },
   Associates: {
     en: "Associates",
-    fr: "Partenaires"
+    fr: "Associés"
+  },
+  Associate: {
+    en: "Lawyer - Associate",
+    fr: "Avocat - Associé"
   },
 
   // No Results

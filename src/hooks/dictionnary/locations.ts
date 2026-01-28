@@ -15,6 +15,10 @@ export const LOCATIONS_DICT: LocationsDictProps = {
     en: "Strategically spread across the Continent",
     fr: "Stratégiquement répartis à travers le Continent"
   },
+  InternationalPartners: {
+    en: "International Partners",
+    fr: "Nos partenaires internationaux"
+  },
 
   // Regions
   Africa: {
@@ -46,8 +50,8 @@ export const LOCATIONS_DICT: LocationsDictProps = {
 
   // Office Types
   LawFirm: {
-    en: "Law Firm",
-    fr: "Cabinet d'Avocats"
+    en: "Society of Lawyers at the Paris Bar",
+    fr: "Société d'Avocats au Barreau de Paris"
   },
   LicensedLegalAdvisors: {
     en: "Licensed Legal Advisors",

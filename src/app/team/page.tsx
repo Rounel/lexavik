@@ -119,7 +119,7 @@ export default function TeamPage() {
 
           {/* Associate grid */}
           <div className={`${filteredMembers[0].length > 0 ? '' : 'hidden'} w-full py-3 border-b border-gray-500 mb-3 text-2xl font-bold text-secondary`}>
-            {TEAM_DICT.Partners[language]}
+            {TEAM_DICT.Associates[language]}
           </div>
           {filteredMembers[0].length > 0 ? (
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -135,9 +135,9 @@ export default function TeamPage() {
             </div>
           )}
 
-          {/* Partners grid */}
+          {/* Collaborators grid */}
           <div className={`${filteredMembers[1].length > 0 ? '' : 'hidden'} w-full py-3 border-b border-gray-500 mt-10 mb-3 text-2xl font-bold text-secondary`}>
-            {TEAM_DICT.Associates[language]}
+            {TEAM_DICT.Collaborators[language]}
           </div>
           {filteredMembers[1].length > 0 ? (
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -233,6 +233,7 @@ function TeamMemberCard({ member, language }: TeamMemberCardProps) {
         <h3 className="text-xl font-medium text-secondary mb-1 group-hover:text-primary-700 transition-colors">
           {member.name}
         </h3>
+        <p className="text-primary-700 font-medium text-sm mb-2">{member.status === "associate" && TEAM_DICT.Associate[language]}</p>
         <p className="text-primary-700 font-medium text-sm mb-2">{member.role[language]}</p>
       </div>
     </div>
