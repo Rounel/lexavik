@@ -9,23 +9,26 @@ import { PRACTICE_AREAS, TEAM_MEMBERS, LEGAL_PROCESS, EXPERTISE_POLES } from "@/
 import PracticeSection from "@/components/PracticeSection";
 import { useStore } from "@/hooks/use-language";
 import { HOME_DICT, COMMON_DICT } from "@/hooks/dictionnary";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <div className="items-center justify-items-center min-h-screen font-[family-name:var(--font-dm-serif-text)] relative">
-      <HeroSection />
-      <AboutSection />
-      {/* <StatsSection /> */}
-      <PracticeSection />
+    <Suspense>
+      <div className="items-center justify-items-center min-h-screen font-[family-name:var(--font-dm-serif-text)] relative">
+        <HeroSection />
+        <AboutSection />
+        {/* <StatsSection /> */}
+        <PracticeSection />
 
-      {/* Awards Section */}
-      {/* <AwardsSection /> */}
+        {/* Awards Section */}
+        {/* <AwardsSection /> */}
 
-      <ProcessSection />
-      <TeamPreview />
-      {/* <TestimonialsSection /> */}
-      {/* <NewsPage /> */}
-    </div>
+        <ProcessSection />
+        <TeamPreview />
+        {/* <TestimonialsSection /> */}
+        {/* <NewsPage /> */}
+      </div>
+    </Suspense>
   );
 }
 
@@ -41,7 +44,7 @@ function AboutSection() {
           <div className="relative h-[700px]">
             <div className="relative h-full w-full overflow-hidden">
               <Image
-                src="/team (12).jpeg"
+                src="/associates.jpg"
                 alt="Legal Excellence"
                 fill
                 className="object-cover"
@@ -151,7 +154,7 @@ function TeamPreview() {
                   src={member.image}
                   alt={member.name}
                   fill
-                  className={`object-cover transition-transform duration-500 ${index === 2 ? "scale-200" : ""} ${index === 1 ? "scale-130" : ""}`}
+                  className={`object-cover transition-transform duration-500`}
                 />
               </div>
               <div className="p-2 absolute bottom-0 left-0 bg-linear-to-t from-black from-90 to-transparent pt-20 w-full">

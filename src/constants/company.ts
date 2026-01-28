@@ -498,7 +498,7 @@ export const TEAM_MEMBERS = [
       en: "Professor Nanga SILUÉ is an Associate Professor of Law and the Dean of the Faculty of Law at Alassane Ouattara University in Bouaké, Côte d’Ivoire. Admitted to the Bar on November 22, 2012, he joined LEXAVIK in 2024. His expertise includes OHADA law, social and labor law, as well as environmental law.",
       fr: "Me Nanga SILUE est agrégé des écoles de Droit, Doyen de la faculté de Droit de l'Université ALLASANE OUATTARA de Bouaké en Côte d'Ivoire); Il a preté serment le 22/11/2012. Il intervient en Droit OHADA, Droit social et du travail, Droit OHADA, Droit de l'environnement. Il a rejoint LEXAVIK en 2024. "
     },
-    image: "/team (3).jpeg",
+    image: "/team_a2.jpg",
     bio: {
       en: "Distinguished academic and practicing lawyer with expertise in business law and legal research.",
       fr: "Universitaire et praticien distingué avec une expertise en droit des affaires et recherche juridique."
@@ -522,7 +522,7 @@ export const TEAM_MEMBERS = [
       en: "Anthony OBENG-KOFI, PhD in Law, is a Senior Lecturer at Péléforo Gon Coulibaly University in Korhogo. Admitted to the Bar on January 28, 2016, he specializes in immigration and nationality law, family law, OHADA law, corporate law, and project finance.",
       fr: "Me Anthony OBENG-KOFI, est Docteur en Droit. Il est chargé de cours à l'Université Gon Coulibaly de Korhogo. Il a preté serment le 28/01/2016. Il intervient en droit des étrangers et de la nationalité, en droit de la famille, en droit OHADA et en droit des sociétés ainsi qu'en financement de projet.  "
     },
-    image: "/team (4).jpeg",
+    image: "/team_a1.jpg",
     bio: {
       en: "Specialized in business law and project finance with particular expertise in OHADA law and international transactions.",
       fr: "Spécialisé en droit des affaires et financement de projets avec une expertise particulière en droit OHADA et transactions internationales."
