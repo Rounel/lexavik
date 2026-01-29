@@ -32,10 +32,6 @@ export default function PracticeSection({
     // Utiliser le paramètre URL "pole" en priorité, sinon utiliser selectedCategory
     const categoryToUse = poleParam || selectedCategory;
 
-    // Si on est sur la page de recherche et qu'il n'y a pas de critères, ne rien afficher
-    if (isSearchPage && !categoryToUse && !searchDomain) {
-      return [];
-    }
 
     // Créer une liste plate de domaines avec leur catégorie parente
     let allDomains: Array<{
@@ -78,7 +74,7 @@ export default function PracticeSection({
         <div className="relative min-h-screen bg-linear-to-b from-[#F5F1EB] to-[#FFFAF6] w-full px-4 py-20 sm:px-6 lg:px-8 font-[family-name:var(--font-dm-sans)]">
           <div className="mx-auto max-w-7xl text-center">
             <p className="text-gray-600 text-lg">
-              {HOME_DICT.UseSearchFields[language]}
+              {COMMON_DICT.NoResultsFound[language]}
             </p>
           </div>
         </div>
