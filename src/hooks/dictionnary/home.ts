@@ -8,12 +8,12 @@ interface HomeDictProps {
 export const HOME_DICT: HomeDictProps = {
   // Hero Section
   HeroTitle: {
-    en: "Expertise at the service of your legal projects",
-    fr: "Une expertise au service de vos projets juridiques"
+    en: "Expertise at the service of your projects",
+    fr: "Une expertise au service de vos projets"
   },
   HeroDescription: {
-    en: "Law firm created in April 2015, specialized in business law. Presence in Paris and Abidjan, partners across Africa. Contact us for a consultation.",
-    fr: "Cabinet d'avocats créé en avril 2015, spécialisé en droit des affaires. Présence à Paris et Abidjan, partenaires à travers l'Afrique. Contactez-nous pour une consultation."
+    en: "Law firm created in April 2015, specialized in business law. Operating in Paris and across several African countries through our partner network. Contact us for a consultation.",
+    fr: "Cabinet d'avocats créé en avril 2015, spécialisé en droit des affaires. Présent à Paris et dans plusieurs pays d'Afrique à travers ses partenaires. Contactez-nous pour une consultation."
   },
 
   // Why Choose Section
@@ -30,8 +30,8 @@ export const HOME_DICT: HomeDictProps = {
     fr: "Créé en avril 2015, le Cabinet d'Avocats LEXAVIK offre un service juridique complet et des solutions adaptées à vos préoccupations."
   },
   FieldExperience: {
-    en: "Composed of a multidisciplinary team and drawing on extensive field experience, LEXAVIK Law Firm specializes not only in European business law but also in OHADA law, including corporate law, contract law, enforcement proceedings, as well as various community regulations (CEMAC, UEMOA, CIMA, OAPI).",
-    fr: "Composé d'une équipe pluridisciplinaire, LEXAVIK et d'une expérience acquise sur le terrain, le Cabinet d'Avocats LEXAVIK maîtrise outre, le droit européen des affaires, le droit OHADA, et en ce, le droit des sociétés, le droit des contrats, les voies d'exécution ainsi que les différentes réglementations communautaires (CEMAC, UEMOA, CIMA, OAPI)."
+    en: "Composed of a multidisciplinary team and drawing on extensive field experience, LEXAVIK Law Firm specializes not only in European business law but also in OHADA law, including corporate law, contract law, enforcement proceedings, as well as various community regulations (CEMAC, UEMOA, CIMA, OAPI) and national regulations.",
+    fr: "Composé d'une équipe pluridisciplinaire, LEXAVIK et d'une expérience acquise sur le terrain, le Cabinet d'Avocats LEXAVIK maîtrise outre, le droit européen des affaires, le droit OHADA, le droit des sociétés, le droit des contrats, les voies d'exécution ainsi que les différentes réglementations communautaires (CEMAC, UEMOA, CIMA, OAPI) et nationales."
   },
 
   // Features
@@ -62,6 +62,14 @@ export const HOME_DICT: HomeDictProps = {
   DiscoverServices: {
     en: "Discover our services",
     fr: "Découvrez nos services"
+  },
+  EuropeanLawExperience: {
+    en: "European Law Experience",
+    fr: "Expérience en droit Européen"
+  },
+  EuropeanLawExperienceDesc: {
+    en: "Extensive experience in European law and regulations",
+    fr: "Expérience étendue en droit européen et en réglementations"
   },
 
   // Team Section

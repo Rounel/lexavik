@@ -51,8 +51,8 @@ export const ABOUT_DICT: AboutDictProps = {
     fr: "Spécialisation Droit des Affaires"
   },
   SpecializationText: {
-    en: "Specializing in business law, the firm operates in Paris and Abidjan. We secure your projects and defend you in case of litigation, before national and international courts.",
-    fr: "De vocation droit des affaires, il intervient à Paris et à Abidjan. Il sécurise vos projets et vous défend en cas de contentieux, devant les juridictions nationales et internationales."
+    en: "Specializing in business law, LEXAVIK operates in Paris and across Africa through our partners and experts. The LEXAVIK firm secures your projects and defends your interests in litigation before both national and international courts.",
+    fr: "De vocation droit des affaires, LEXAVIK intervient à Paris et en Afrique à travers nos partenaires et experts. Le cabinet LEXAVIK sécurise vos projets et vous défend en cas de contentieux, devant les juridictions nationales et internationales."
   },
 
   Experience: {
@@ -101,12 +101,12 @@ export const ABOUT_DICT: AboutDictProps = {
   },
 
   GlobalPresence: {
-    en: "A Global Presence with Diverse Clientele",
-    fr: "Une Présence Mondiale avec une Diversité de Clientèle"
+    en: "A Global Presence",
+    fr: "Une Présence Mondiale"
   },
   GlobalPresenceText: {
-    en: "With a presence spanning Paris and Africa, our lawyers and experts provide comprehensive legal support for your international projects.",
-    fr: "Avec une présence qui s'étend de Paris à l'Afrique, nos avocats et experts vous apportent un accompagnement juridique complet pour vos projets internationaux."
+    en: "With a presence spanning Paris and Africa, our lawyers and experts provide comprehensive legal support for your projects.",
+    fr: "Avec une présence qui s'étend de Paris à l'Afrique, nos avocats et experts vous apportent un accompagnement juridique complet pour vos projets."
   },
 
   // Values
@@ -178,8 +178,8 @@ export const ABOUT_DICT: AboutDictProps = {
     fr: "Travaillons Ensemble"
   },
   WorkTogetherDesc: {
-    en: "Discover how LEXAVIK can support you in your legal projects.",
-    fr: "Découvrez comment LEXAVIK peut vous accompagner dans vos projets juridiques."
+    en: "Discover how LEXAVIK can support you in your projects.",
+    fr: "Découvrez comment LEXAVIK peut vous accompagner dans vos projets."
   },
   MeetTheTeam: {
     en: "Meet the Team",

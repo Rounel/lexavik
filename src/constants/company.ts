@@ -5,8 +5,8 @@ export const COMPANY_INFO = {
     fr: "Votre Partenaire Juridique de Confiance"
   },
   description: {
-    en: "Created in April 2015, LEXAVIK is a law firm organized around a multidisciplinary team of lawyers and experts. With a focus on business law, we operate in Paris and Abidjan, securing your projects and defending you in litigation before national and international courts.",
-    fr: "Créé en avril 2015, le Cabinet d'Avocats LEXAVIK est une structure organisée autour d'une équipe pluridisciplinaire d'avocats et d'experts. De vocation droit des affaires, il intervient à Paris et à Abidjan. Il sécurise vos projets et vous défend en cas de contentieux, devant les juridictions nationales et internationales."
+    en: "Created in April 2015, LEXAVIK is a law firm organized around a multidisciplinary team of lawyers and experts. Specializing in business law, LEXAVIK operates in Paris and across Africa through our partners and experts. The LEXAVIK firm secures your projects and defends your interests in litigation before both national and international courts.",
+    fr: "Créé en avril 2015, le Cabinet d'Avocats LEXAVIK est une structure organisée autour d'une équipe pluridisciplinaire d'avocats et d'experts. De vocation droit des affaires, LEXAVIK intervient à Paris et en Afrique à travers nos partenaires et experts. Le cabinet LEXAVIK sécurise vos projets et vous défend en cas de contentieux, devant les juridictions nationales et internationales."
   },
   vision: {
     title: {
@@ -15,8 +15,8 @@ export const COMPANY_INFO = {
     },
     content: [
       {
-        en: "Rich in field experience, LEXAVIK masters European business law, OHADA law, and various community regulations (CEMAC, UEMOA, CIMA, OAPI). This synergy of skills allows LEXAVIK and its international partners to offer national and international clients complete legal service and solutions adapted to their concerns.",
-        fr: "Riche d'une expérience acquise sur le terrain, le Cabinet d'Avocats LEXAVIK maîtrise outre, le droit européen des affaires, le droit OHADA, et en ce, le droit des sociétés, le droit des contrats, les voies d'exécution ainsi que les différentes réglementations communautaires (CEMAC, UEMOA, CIMA, OAPI). Cette synergie de compétences permet au Cabinet LEXAVIK et ses partenaires internationaux d'offrir à sa clientèle nationale et internationale, un service juridique complet et des solutions adaptées à leurs préoccupations."
+        en: "Drawing on extensive field experience, LEXAVIK Law Firm possesses comprehensive expertise in European business law, OHADA law, corporate law, and contract law, as well as enforcement proceedings and debt recovery procedures, alongside various regional (CEMAC, UEMOA, CIMA, OAPI) and national regulations. This synergy of skills enables LEXAVIK and its international partners to provide domestic and international clients with full legal services and solutions tailored to their specific needs.",
+        fr: "Riche d'une expérience acquise sur le terrain, le Cabinet d'Avocats LEXAVIK maîtrise outre, le droit européen des affaires, le droit OHADA, le droit des sociétés, le droit des contrats, les voies d'exécution et les procédures de recouvrement ainsi que les différentes réglementations communautaires (CEMAC, UEMOA, CIMA, OAPI) et nationales. Cette synergie de compétences permet au Cabinet LEXAVIK et ses partenaires internationaux d'offrir à sa clientèle nationale et internationale, un service juridique complet et des solutions adaptées à leurs préoccupations."
       },
       {
         en: "Thanks to its dynamism and expertise in various areas of law as well as in specific sectors such as tax law, telecommunications and digital, banking and finance, environment, mining, energy and infrastructure, LEXAVIK provides you with a comprehensive and complete response.",
@@ -36,7 +36,7 @@ export const COMPANY_INFO = {
   },
   contact: {
     email: "akwaba@lexavik.com",
-    phone: "+33 (0) 1.53.16.05.40",
+    phone: "+33 (7) 81 91 67 55",
     address: {
       en: "8, Rue de Chantilly – 75009 PARIS",
       fr: "8, Rue de Chantilly – 75009 PARIS"
@@ -88,8 +88,8 @@ export const PRACTICE_AREAS = [
       fr: "Droit OHADA et Communautaire"
     },
     description: {
-      en: "Expert advice in OHADA business law covering corporate law, securities, recovery procedures, and arbitration across 17 member states.",
-      fr: "Conseil expert en droit des affaires OHADA couvrant le droit des sociétés, les sûretés, les procédures de recouvrement et l'arbitrage dans 17 États membres."
+      en: "Expert in OHADA law, covering debt recovery and enforcement proceedings, accounting law for non-profit entities, arbitration and mediation law, insolvency and debt clearance procedures, corporate law and simplified joint-stock companies (GIE), security interests, road transport contracts, and other regional legal frameworks (UEMOA, CEMAC, CIMA, OAPI).",
+      fr: "Expert en droit OHADA couvrant les procédures de recouvrement et des voies d’exécution, le droit comptable des entités à but non lucratif, droit de l’arbitrage, de la médiation, des procédures d’apurement du passif, des sociétés commerciales et des GIE, des sûretés, des contrats de transport par route et des autres droits communautaires (UEMOA, CEMAC, CIMA, OAPI)."
     },
     icon: "Scale",
     svg: "/justice-scale.svg",
@@ -166,7 +166,7 @@ export const PRACTICE_AREAS = [
     image: "/ddc.jpg"
   },
   {
-    id: "pi",
+    id: "pub",
     title: {
       en: "Public Business Law",
       fr: "Droit Public des Affaires"
@@ -222,7 +222,7 @@ export const PRACTICE_AREAS = [
     image: "/smart-law-legal-advice-icons-lawyer-working-tools (1).jpg"
   },
   {
-    id: "labor-law",
+    id: "soc-tra",
     title: {
       en: "Labor & Employment Law",
       fr: "Droit Social & du Travail"
@@ -236,7 +236,7 @@ export const PRACTICE_AREAS = [
     image: "/ddf.jpg"
   },
   {
-    id: "int-pro",
+    id: "pi",
     title: {
       en: "Intellectual Property",
       fr: "Propriété Intellectuelle"
@@ -256,8 +256,8 @@ export const PRACTICE_AREAS = [
       fr: "Droit des Étrangers et de la Nationalité"
     },
     description: {
-      en: "Visa assistance, residence permits, regularization, representation before administrative and judicial authorities.",
-      fr: "Aide à l'obtention de visas et titres de séjour, régularisation, représentation devant les autorités administratives et judiciaires."
+      en: "Assistance with obtaining visas and residence permits, administrative regularization, family reunification, and naturalization processes. Legal representation before administrative and judicial courts.",
+      fr: "Aide à l'obtention de visas et titres de séjour, régularisation administrative, regroupement familial et processus de naturalisation. Assistance devant les juridictions administratives et judiciaires."
     },
     icon: "Plane",
     svg: "/immigration-law.svg",
@@ -292,7 +292,7 @@ export const PRACTICE_AREAS = [
     image: "/ddf.jpg"
   },
   {
-    id: "project-finance",
+    id: "fin-proj",
     title: {
       en: "Project Finance",
       fr: "Financement de Projets"
@@ -460,11 +460,12 @@ export const EXPERTISE_POLES = [
 export const TEAM_MEMBERS = [
   {
     id: "1",
-    name: "Me Simplice KASSI",
+    name: "Simplice KASSI",
     role: {
-      en: "Doctor of Law",
-      fr: "Docteur en droit"
+      en: ["Doctor of Law"],
+      fr: ["Docteur en droit"]
     },
+    paris_bar: true,
     education: {
       en: "Doctor of Law",
       fr: "Docteur en droit"
@@ -487,16 +488,17 @@ export const TEAM_MEMBERS = [
     id: "3",
     name: "Nanga SILUE",
     role: {
-      en: "Agrégé Professor",
-      fr: "Professeur Agrégé"
+      en: ["Agrégé Professor"],
+      fr: ["Professeur Agrégé"]
     },
+    paris_bar: true,
     education: {
       en: "Agrégé des facultés de droit",
       fr: "Agrégé des facultés de droit"
     },
     specialization: {
       en: "Professor Nanga SILUÉ is an Associate Professor of Law and the Dean of the Faculty of Law at Alassane Ouattara University in Bouaké, Côte d’Ivoire. Admitted to the Bar on November 22, 2012, he joined LEXAVIK in 2024. His expertise includes OHADA law, social and labor law, as well as environmental law.",
-      fr: "Me Nanga SILUE est agrégé des écoles de Droit, Doyen de la faculté de Droit de l'Université ALLASANE OUATTARA de Bouaké en Côte d'Ivoire); Il a preté serment le 22/11/2012. Il intervient en Droit OHADA, Droit social et du travail, Droit OHADA, Droit de l'environnement. Il a rejoint LEXAVIK en 2024. "
+      fr: "Me Nanga SILUE est agrégé des écoles de Droit, Doyen de la faculté de Droit de l'Université ALLASANE OUATTARA de Bouaké en Côte d'Ivoire. Il a preté serment le 22/11/2012. Il intervient en Droit OHADA, Droit social et du travail, Droit OHADA, Droit de l'environnement. Il a rejoint LEXAVIK en 2024. "
     },
     image: "/team_a2.jpg",
     bio: {
@@ -511,18 +513,19 @@ export const TEAM_MEMBERS = [
     id: "2",
     name: "Anthony OBENG-KOFI",
     role: {
-      en: "Doctor of Law",
-      fr: "Docteur en droit"
+      en: ["Doctor of Law"],
+      fr: ["Docteur en droit"]
     },
+    paris_bar: true,
     education: {
       en: "Doctor of Law",
       fr: "Docteur en droit"
     },
     specialization: {
-      en: "Anthony OBENG-KOFI, PhD in Law, is a Senior Lecturer at Péléforo Gon Coulibaly University in Korhogo. Admitted to the Bar on January 28, 2016, he specializes in immigration and nationality law, family law, OHADA law, corporate law, and project finance.",
-      fr: "Me Anthony OBENG-KOFI, est Docteur en Droit. Il est chargé de cours à l'Université Gon Coulibaly de Korhogo. Il a preté serment le 28/01/2016. Il intervient en droit des étrangers et de la nationalité, en droit de la famille, en droit OHADA et en droit des sociétés ainsi qu'en financement de projet.  "
+      en: "Anthony OBENG-KOFI, PhD in Law, was sworn in on January 28, 2016. He is a member of the Regulatory Board of the Ivorian Nuclear Radiation Protection and Safety Authority (ARSN) and serves as President of the Association of Ivorian Lawyers and Legal Experts in France (AJAIF). His practice focuses on immigration and nationality law, family law, OHADA law, corporate law, and project finance.",
+      fr: "Me Anthony OBENG-KOFI, est Docteur en Droit. Il est membre du Conseil de Régulation de l’Autorité de radioprotection, de sûreté et de sécurité Nucléaires de Côte d’Ivoire (ARSN) et président de l’Association des Avocats et Juristes Ivoiriens de France (AJAIF). Il a preté serment le 28/01/2016. Il intervient en droit des étrangers et de la nationalité, en droit de la famille, en droit OHADA et en droit des sociétés ainsi qu'en financement de projet."
     },
-    image: "/team_a1.jpg",
+    image: "/Photo de AO.jpeg",
     bio: {
       en: "Specialized in business law and project finance with particular expertise in OHADA law and international transactions.",
       fr: "Spécialisé en droit des affaires et financement de projets avec une expertise particulière en droit OHADA et transactions internationales."
@@ -534,44 +537,47 @@ export const TEAM_MEMBERS = [
   },
   {
     id: "4",
-    name: "Priscillia LAGBO",
+    name: "Saint Serge KOUAMÉ",
     role: {
-      fr: "Juriste",
-      en: "Legal Counsel"
+      en: ["Legal Counsel", "Doctor of Law"],
+      fr: ["Juriste collaborateur", "Docteur en droit privé"]
     },
+    paris_bar: false,
     status: "partner",
-    image: "/Photo - Priscillia.jpeg", // À remplacer par le chemin de la photo si disponible
+    image: "/Photo - Saint Serge.png", // À remplacer par la photo si disponible
     bio: {
-      en: "Legal professional with expertise in corporate law and legal research.",
-      fr: "Professionnelle du droit avec une expertise en droit des sociétés et en recherche juridique."
+      en: "Legal Counsel at LEXAVIK Law Firm. Doctor of Private Law, author of a Thesis on the liability of parent companies for their subsidiaries under OHADA law. Member of the Laboratory of Studies on Law and Development in Côte d'Ivoire (LEDD-CI). Specializes in business law and is a Lecturer-Researcher at Félix Houphouët-Boigny University (Abidjan).",
+      fr: "Juriste collaborateur au sein de LEXAVIK Cabinet d'Avocats. Docteur en droit privé, auteur d'une Thèse sur la responsabilité des sociétés mères du fait de leurs filiales en droit OHADA. Membre du Laboratoire d'Études sur le Droit et le Développement en Côte d'Ivoire (LEDD-CI). Spécialisé en droit des affaires, il est Enseignant-chercheur à l'Université Felix Houphouët-Boigny (Abidjan)."
     },
     education: {
-      en: "Master's Degree in Business Law",
-      fr: "Master en Droit des Affaires"
+      en: "Holding a PhD in Private Law, Saint Serge KOUAME is a Professor and Researcher at the Félix HOUPHOUËT-BOIGNY University of Abidjan. He specializes in OHADA Law and Labor Law.",
+      fr: "Titulaire d’un doctorat en droit privé, Saint Serge KOUAME est enseignant chercheur à l’Université Félix HOUPHOUËT-BOIGNY d’Abidjan. Il est spécialisé en droit OHADA et en Droit du Travail."
     },
     specialization: {
-      en: "Corporate Law, Legal Research",
-      fr: "Droit des sociétés, Recherche juridique"
+      en: "Expertise: Business Law, Tax Law, Corporate Law, Labor Law, and OHADA Law.",
+      fr: "Droit des affaires, Droit fiscal, Droit des sociétés, Droit du travail, Droit OHADA."
     },
-    email: "priscillia.lagbo@lexavik.com",
-    phone: "+33 (0) 1.53.16.05.40"
+    email: "saintserge.kouame@lexavik.com", // À confirmer
+    phone: "+33 (0) 1.53.16.05.40", // À confirmer
+    phone_civ: "+225 00 00 00 00" // À compléter
   },
   {
     id: "5",
-    name: "Marius Behegbin TANOH",
+    name: "Marius TANOH",
     role: {
-      en: "Tax and Social Security Law Specialist",
-      fr: "Spécialiste en Fiscalité et Droits des Prélèvements Sociaux"
+      en: ["Legal Counsel", "Tax and Social Security Law Specialist"],
+      fr: ["Juriste collaborateur", "Spécialiste en Fiscalité et Droits des Prélèvements Sociaux"]
     },
+    paris_bar: false,
     status: "partner",
-    image: "/Photo de TBM.png", // À remplacer par la photo si disponible
+    image: "/Photo de TBM.jpeg", // À remplacer par la photo si disponible
     bio: {
       en: "Tax and Social Security Law Specialist with experience in legal consulting firms and law firms, including GOGOUA TAX and LEGAL. Currently collaborating with LEXAVIK [FR] and OBENG-KOFI Fian [CI].",
       fr: "Spécialiste en Fiscalité et Droits des Prélèvements Sociaux avec une expérience en cabinets de conseil et d'avocats, dont le Cabinet GOGOUA TAX and LEGAL. Actuellement collaborateur d'avocats près le cabinet LEXAVIK [FR] et le Cabinet OBENG-KOFI Fian [CI]."
     },
     education: {
-      en: "Master's Degree in Tax and Social Security Law (2020-2021)\nLicense in Private Law (2015-2016)\nBaccalaureate A2 (2013)",
-      fr: "Master en Fiscalité et Droits des Prélèvements Sociaux (2020-2021)\nLicence en Droit Privé (2015-2016)\nBaccalauréat série A2 (2013)"
+      en: "Holding a Master’s degree in Taxation and Social Security Law, Mr. Marius TANOH specializes in Tax Law and OHADA Law.",
+      fr: "Titulaire d’un Master en fiscalité et droit des prélèvements sociaux, Monsieur Marius TANOH est spécialisé en droit fiscal et en droit OHADA."
     },
     specialization: {
       en: "Legal Counsel specializing in Tax Law and Social Security Contributions.",
@@ -583,28 +589,28 @@ export const TEAM_MEMBERS = [
   },
   {
     id: "6",
-    name: "Dr Konan Saint Serge KOUAMÉ",
+    name: "Priscillia LAGBO",
     role: {
-      en: "Legal Counsel - Doctor of Law",
-      fr: "Juriste collaborateur - Docteur en droit privé"
+      fr: ["Juriste Collaboratrice"],
+      en: ["Legal Counsel"]
     },
+    paris_bar: false,
     status: "partner",
-    image: "/Photo - Saint Serge.png", // À remplacer par la photo si disponible
+    image: "/Photo - Priscillia.jpeg", // À remplacer par le chemin de la photo si disponible
     bio: {
-      en: "Legal Counsel at LEXAVIK Law Firm. Doctor of Private Law, author of a Thesis on the liability of parent companies for their subsidiaries under OHADA law. Member of the Laboratory of Studies on Law and Development in Côte d'Ivoire (LEDD-CI). Specializes in business law and is a Lecturer-Researcher at Félix Houphouët-Boigny University (Abidjan).",
-      fr: "Juriste collaborateur au sein de LEXAVIK Cabinet d'Avocats. Docteur en droit privé, auteur d'une Thèse sur la responsabilité des sociétés mères du fait de leurs filiales en droit OHADA. Membre du Laboratoire d'Études sur le Droit et le Développement en Côte d'Ivoire (LEDD-CI). Spécialisé en droit des affaires, il est Enseignant-chercheur à l'Université Felix Houphouët-Boigny (Abidjan)."
+      en: "Legal professional with expertise in corporate law and legal research.",
+      fr: "Professionnelle du droit avec une expertise en droit des sociétés et en recherche juridique."
     },
     education: {
-      en: "Doctorate in Private Law",
-      fr: "Doctorat en Droit privé"
+      en: "Holding a Master’s degree in Business Law, Ms. Priscillia LAGBO specializes in Corporate Law as well as Social and Labor Law.",
+      fr: "Titulaire d’un master en Droit des affaires, Madame Priscillia LAGBO est spécialisée en Droit des sociétés et en droit social et du travail."
     },
     specialization: {
-      en: "Expertise: Business Law, Tax Law, Corporate Law, Labor Law, and OHADA Law.",
-      fr: "Droit des affaires, Droit fiscal, Droit des sociétés, Droit du travail, Droit OHADA."
+      en: "Corporate Law, Legal Research",
+      fr: "Droit des sociétés, Recherche juridique"
     },
-    email: "saintserge.kouame@lexavik.com", // À confirmer
-    phone: "+33 (0) 1.53.16.05.40", // À confirmer
-    phone_civ: "+225 00 00 00 00" // À compléter
+    email: "priscillia.lagbo@lexavik.com",
+    phone: "+33 (0) 1.53.16.05.40"
   }
 ] as const;
 

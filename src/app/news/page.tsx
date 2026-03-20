@@ -10,8 +10,7 @@ import { NEWS_DICT, COMMON_DICT } from "@/hooks/dictionnary"
 
 export default function NewsPage() {
   const { language } = useStore();
-  // Duplicate articles to have more content for demonstration
-  const allArticles = [...NEWS_ARTICLES, ...NEWS_ARTICLES, ...NEWS_ARTICLES, ...NEWS_ARTICLES];
+  const allArticles = [...NEWS_ARTICLES];
 
   return (
     <div className="min-h-screen bg-white">
@@ -47,6 +46,7 @@ export default function NewsPage() {
                       src={article.image || "/logo.png"}
                       alt={article.title[language]}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     {/* Category Badge */}

@@ -19,8 +19,7 @@ export async function POST(req: NextRequest) {
     // Send email using Resend
     const data = await resend.emails.send({
       from: 'Lexavik Contact Form <onboarding@resend.dev>', // This will be replaced with your domain
-      // to: ['akwaba@lexavik.com'],
-      to: ['fabelseba@gmail.com'],
+      to: ['akwaba@lexavik.com'],
       replyTo: email,
       subject: `Nouveau message de contact: ${subject}`,
       html: `

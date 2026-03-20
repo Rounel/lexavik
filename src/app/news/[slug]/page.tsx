@@ -1,6 +1,41 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
+import { NEWS_ARTICLES } from "@/constants/company"
+
+const SITE_URL = "https://www.lexavik.com"
+
+export async function generateStaticParams() {
+  return NEWS_ARTICLES.map((article) => ({ slug: article.slug }))
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+  const article = NEWS_ARTICLES.find((a) => a.slug === slug)
+
+  if (!article) {
+    return { title: "Article introuvable" }
+  }
+
+  return {
+    title: article.title.fr,
+    description: article.excerpt.fr,
+    alternates: { canonical: `${SITE_URL}/news/${article.slug}` },
+    openGraph: {
+      title: article.title.fr,
+      description: article.excerpt.fr,
+      url: `${SITE_URL}/news/${article.slug}`,
+      type: "article",
+      publishedTime: article.date,
+      images: article.image ? [{ url: article.image, width: 1200, height: 630 }] : [],
+    },
+  }
+}
 
 export default function NewsDetails() {
   return (
@@ -39,6 +74,7 @@ export default function NewsDetails() {
               src="/babi.jpg"
               alt="Cityscape view"
               fill
+              sizes="(max-width: 768px) 100vw, 896px"
               className="object-cover grayscale"
               priority
             />

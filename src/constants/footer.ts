@@ -37,11 +37,11 @@ export const footer_links: FooterLink[] = [
         link: "locations",
         sub: []
     },
-    {
-        label: FOOT_DICT.News,
-        link: "news",
-        sub: []
-    },
+    // {
+    //     label: FOOT_DICT.News,
+    //     link: "news",
+    //     sub: []
+    // },
     // {
     //     label: FOOT_DICT.Partners,
     //     link: "#",

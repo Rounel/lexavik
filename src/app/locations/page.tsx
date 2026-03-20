@@ -70,20 +70,42 @@ export default function LocationsPage() {
                     </p> */}
                 </div>
 
-                <div className="grid grid-cols-2">
-                    <div className="">
-                        <span>ABIDJAN-CÔTE D'IVOIRE </span>
-                        <h3 className="text-2xl font-semibold text-primary mb-4">Cabinet OBENG-KOFI Fian </h3>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div className="relative overflow-hidden border border-primary shadow-2xl shadow-secondary/25 rounded-xl p-4">
+                        <span className="text-xs md:text-sm">ABIDJAN - CÔTE D'IVOIRE </span>
+                        <h3 className="text-base lg:text-2xl font-semibold text-primary mb-4">Cabinet OBENG-KOFI Fian </h3>
                         <p className="text-sm md:text-base tracking-wider mb-2">Cocody Canebière,</p>
                         <p className="text-sm md:text-base tracking-wider mb-2">Route du Lycée Technique </p>
                         <p className="text-sm md:text-base tracking-wider mb-2">01 B.P. 6514 Abidjan 01 (RCI)</p>
                         <p className="text-sm md:text-base tracking-wider mb-2">Tél : + (225) 22 44 68 36 / + (225) 22 44 68 46</p>
                         <p className="text-sm md:text-base tracking-wider mb-2">Fax : + (225) 22 44 68 72</p>
                         <p className="text-sm md:text-base tracking-wider mb-2">obengfian@yahoo.fr</p>
+
+                        <Image 
+                            src={"/civ.png"} 
+                            alt="Côte d'Ivoire" 
+                            width={200} 
+                            height={200} 
+                            className="absolute hidden lg:block lg:-right-20 lg:-bottom-35 lg:w-90 lg:-rotate-25"
+                        />
                     </div>
-                    <div className="">
-                        <span>MALI</span>
-                        <h3 className="text-2xl font-semibold text-primary mb-4">Cabinet de Me MAKAN Diallo</h3>
+                    <div className="relative overflow-hidden border border-primary shadow-2xl shadow-secondary/25 rounded-xl p-4">
+                        <span className="text-xs md:text-sm">BAMAKO - MALI</span>
+                        <Link href="https://artemisconseil.com/le-cabinet/" target="_blank">
+                            <h3 className="text-base lg:text-2xl font-semibold text-primary mb-4 underline">Le Cabinet | Artemis Conseil</h3>
+                        </Link>
+                        <p className="text-sm md:text-base tracking-wider mb-2">Faladié SEMA Rue du Gouverneur Immeuble SIGO Bamako-Mali</p>
+                        <p className="text-sm md:text-base tracking-wider mb-2">Tél : (+223) 20200985 / (+223) 44379233</p>
+                        <p className="text-sm md:text-base tracking-wider mb-2">contact@artemisconseil.com</p>
+                        <p className="text-sm md:text-base tracking-wider mb-2">artemisconseil2015@gmail.com</p>
+
+                        <Image 
+                            src={"/mali.png"} 
+                            alt="Mali" 
+                            width={200} 
+                            height={200} 
+                            className="absolute hidden lg:block lg:-right-20 lg:-bottom-35 lg:w-90 lg:-rotate-25"
+                        />
                     </div>
                 </div>
             </div>

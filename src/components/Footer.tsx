@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { Mail, Phone, MapPin } from "lucide-react"
 import Image from "next/image"
-import { COMPANY_INFO } from "@/constants/company"
+import { COMPANY_INFO, PRACTICE_AREAS } from "@/constants/company"
 import { useStore } from "@/hooks/use-language"
 import { NAV_DICT, COMMON_DICT } from "@/hooks/dictionnary"
 
@@ -101,31 +101,16 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-6">{NAV_DICT.Expertise[language]}</h3>
             <ul className="space-y-3">
-              <li>
-                <Link href="/practices#ohada-law" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  {NAV_DICT.OHADALaw[language]}
-                </Link>
-              </li>
-              <li>
-                <Link href="/practices#corporate-law" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  {NAV_DICT.CorporateLaw[language]}
-                </Link>
-              </li>
-              <li>
-                <Link href="/practices#banking-finance" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  {NAV_DICT.BankingFinancialLaw[language]}
-                </Link>
-              </li>
-              <li>
-                <Link href="/practices#major-projects" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  {NAV_DICT.MajorProjects[language]}
-                </Link>
-              </li>
-              <li>
-                <Link href="/practices#litigation-arbitration" className="text-gray-300 hover:text-primary-600 transition-colors">
-                  {NAV_DICT.LitigationArbitration[language]}
-                </Link>
-              </li>
+              {PRACTICE_AREAS.slice(0, 6).map((practice) => (
+                <li key={practice.id}>
+                  <Link
+                    href={`/practices/${practice.id}`}
+                    className="text-gray-300 hover:text-primary-600 transition-colors"
+                  >
+                    {practice.title[language]}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

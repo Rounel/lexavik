@@ -105,6 +105,7 @@ export default function AboutPage() {
                 src="/smart-law-legal-advice-icons-astute-lawyer-working-tools-lawyers-office (3).jpg"
                 alt="LEXAVIK Team"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -141,7 +142,7 @@ export default function AboutPage() {
       {/* Expertise & Presence Section */}
       <div className="relative bg-secondary-950 py-20 px-4 sm:px-6 lg:px-8 h-135">
         <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/20 to-secondary-900/50">
-        <Image src="/bg-earth.png" alt="Background" fill className="object-cover grayscale-100 opacity-30" />
+        <Image src="/bg-earth.png" alt="Background" fill sizes="100vw" className="object-cover grayscale-100 opacity-30" />
         </div>
         <div className="mx-auto max-w-7xl relative z-10">
           

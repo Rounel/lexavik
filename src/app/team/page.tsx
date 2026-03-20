@@ -191,12 +191,13 @@ function TeamMemberCard({ member, language }: TeamMemberCardProps) {
   return (
     <div className="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
       {/* Image */}
-      <div className="relative h-90 md:aspect-3/4 overflow-hidden bg-gray-200">
+      <div className="relative h-90 md:aspect-3/4 overflow-hidden bg-gray-200 w-full">
         <Image
           src={member.image}
           alt={member.name}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-110 object-top"
         />
 
         {/* Social Media Overlay */}
@@ -233,8 +234,13 @@ function TeamMemberCard({ member, language }: TeamMemberCardProps) {
         <h3 className="text-xl font-medium text-secondary mb-1 group-hover:text-primary-700 transition-colors">
           {member.name}
         </h3>
-        <p className="text-primary-700 font-medium text-sm mb-2">{member.status === "associate" && TEAM_DICT.Associate[language]}</p>
-        <p className="text-primary-700 font-medium text-sm mb-2">{member.role[language]}</p>
+        <p className="text-primary-700 font-medium text-sm mb-2 uppercase">{member.status === "associate" && TEAM_DICT.Associate[language]}</p>
+        <p className="text-primary-700 font-medium text-sm mb-2">{member.paris_bar ? language === "fr" ? "Inscrit au Barreau de Paris" : "Paris Bar Association Member" : ""}</p>
+        <div className="flex flex-col">
+          {member.role[language].map((role, index) => (
+            <p key={index} className={`text-primary-700 font-medium text-sm mb-2 ${member.status !== "associate" ? "first:uppercase" : ""}`}>{role}</p>
+          ))}
+        </div>
       </div>
     </div>
   )
