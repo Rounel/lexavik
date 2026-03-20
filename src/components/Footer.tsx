@@ -79,11 +79,11 @@ export function Footer() {
                   {NAV_DICT.OurTeam[language]}
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/news" className="text-gray-300 hover:text-primary-600 transition-colors">
                   {NAV_DICT.NewsInsights[language]}
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/locations" className="text-gray-300 hover:text-primary-600 transition-colors">
                   {NAV_DICT.OurOffices[language]}

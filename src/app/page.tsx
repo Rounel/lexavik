@@ -114,7 +114,7 @@ function AboutSection() {
             </div>
 
             <div className="pt-4">
-              <Link href="/expertise">
+              <Link href="/practices">
                 <Button className="group rounded bg-secondary px-8 py-6 text-white hover:bg-secondary-700 transition-all">
                   {HOME_DICT.DiscoverServices[language]}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -147,10 +147,12 @@ function TeamPreview() {
               {HOME_DICT.TeamDescription[language]}
             </p>
           </div>
-          <Button className="group w-max rounded bg-primary px-8 py-6 text-white hover:bg-secondary-700 transition-all">
-            {HOME_DICT.DiscoverExperts[language]}
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Button>
+          <Link href="/team">
+            <Button className="group w-max rounded bg-primary px-8 py-6 text-white hover:bg-secondary-700 transition-all">
+              {HOME_DICT.DiscoverExperts[language]}
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
 
         {/* Team Grid */}
