@@ -186,13 +186,13 @@ export default function PracticeDetailContent() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {relevantTeamMembers.map(member => (
                 <div key={member.id} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
-                  <div className="relative h-64 mb-4 rounded-lg overflow-hidden">
+                  <div className="relative h-80 mb-4 rounded-lg overflow-hidden">
                     <Image
                       src={member.image}
                       alt={member.name}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover"
+                      className="object-cover object-top"
                     />
                   </div>
                   <h3 className="text-xl font-medium text-secondary mb-2">{member.name}</h3>

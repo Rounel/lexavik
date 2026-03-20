@@ -37,7 +37,7 @@ function AboutSection() {
   const { language } = useStore();
 
   return (
-    <div className="w-full bg-white px-4 sm:px-6 lg:px-0 font-[family-name:var(--font-dm-sans)]">
+    <div className="w-full bg-white px-4 sm:px-6 lg:px-0 font-(family-name:--font-dm-sans)">
       <div className="mx-auto w-full max-w-480">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Image Column */}
