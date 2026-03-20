@@ -67,7 +67,7 @@ function AboutSection() {
           </div>
 
           {/* Content Column */}
-          <div className="flex flex-col justify-center py-10">
+          <div className="flex flex-col justify-center py-10 max-w-2xl">
             <span className="text-primary-700 font-medium mb-2 text-sm uppercase tracking-wide">{HOME_DICT.WhyChoose[language]}</span>
             <h2 className="mb-6 text-4xl font-light text-secondary lg:text-5xl">
               {HOME_DICT.TrustedLegalPartner[language]}
@@ -102,6 +102,13 @@ function AboutSection() {
                 <div>
                   <h4 className="font-medium text-secondary mb-1">{HOME_DICT.CompleteService[language]}</h4>
                   <p className="text-gray-600 text-sm">{HOME_DICT.CompleteServiceDesc[language]}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-6 w-6 text-primary-700 shrink-0 mt-1" />
+                <div>
+                  <h4 className="font-medium text-secondary mb-1">{HOME_DICT.EuropeanLawExperience[language]}</h4>
+                  <p className="text-gray-600 text-sm">{HOME_DICT.EuropeanLawExperienceDesc[language]}</p>
                 </div>
               </div>
             </div>

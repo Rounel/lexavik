@@ -204,12 +204,12 @@ export default function PracticeDetailContent() {
                         {member.email}
                       </a>
                     </div>
-                    <div className="flex items-center gap-2">
+                    {/* <div className="flex items-center gap-2">
                       <Phone className="h-4 w-4" />
                       <a href={`tel:${member.phone}`} className="hover:text-primary-700">
                         {member.phone}
                       </a>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}
