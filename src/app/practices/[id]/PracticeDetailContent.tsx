@@ -196,7 +196,11 @@ export default function PracticeDetailContent() {
                     />
                   </div>
                   <h3 className="text-xl font-medium text-secondary mb-2">{member.name}</h3>
-                  <p className="text-primary-700 mb-4">{member.role[language]}</p>
+                  <div className="flex flex-col">
+                    {member.role[language].map((role, index) => (
+                      <p key={index} className={`text-primary-700 font-medium text-sm mb-2 ${member.status !== "associate" ? "first:uppercase" : ""}`}>{role}</p>
+                    ))}
+                  </div>
                   <div className="space-y-2 text-sm text-gray-600">
                     <div className="flex items-center gap-2">
                       <Mail className="h-4 w-4" />
